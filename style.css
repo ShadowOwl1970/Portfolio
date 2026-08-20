@@ -1425,58 +1425,46 @@ a {
 ======================================== */
 
 .resume-hero {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.15fr)
-    minmax(320px, .85fr);
-
-  align-items: end;
-
-  gap:
-    clamp(3rem, 7vw, 7rem);
+  max-width: 1500px;
+  margin: 0 auto;
 
   padding:
-    clamp(4rem, 6vw, 6rem)
+    clamp(4.5rem, 7vw, 7rem)
     var(--page-pad)
-    clamp(4rem, 6vw, 6rem);
+    clamp(4.5rem, 7vw, 6.5rem);
 }
 
 .resume-hero > div:first-child {
-  align-self: start;
+  max-width: 1150px;
 }
 
 .resume-hero h1 {
   margin: 0;
 
   font-family: "DM Serif Display", serif;
-
   font-weight: 400;
 
-  font-size:
-    clamp(4rem, 7vw, 7.5rem);
-
-  line-height: .94;
-
+  font-size: clamp(4rem, 6.7vw, 7.2rem);
+  line-height: .92;
   letter-spacing: -.04em;
 }
 
 .resume-hero h1 em {
-  display: block;
-
+  display: inline;
   color: var(--sage);
-
   font-weight: 400;
 }
 
 .resume-hero-copy {
-  align-self: end;
+  max-width: 760px;
 
-  max-width: 600px;
-
-  margin: 0;
+  margin-top: 2.5rem;
 
   font-size: 1.2rem;
+}
+
+.resume-hero-copy > p {
+  margin: 0;
 }
 
 .resume-actions {
