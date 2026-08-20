@@ -275,7 +275,7 @@ a {
 
 .bubble-hi {
   top: 18%;
-  left: 24%;
+  left: 12%;
   font-size: 1.8rem;
 }
 
@@ -751,8 +751,9 @@ a {
   }
 
   .bubble-hi {
-    left: 0;
-  }
+  left: 4%;
+  top: 12%;
+}
 
   .bubble-role {
     right: .5rem;
