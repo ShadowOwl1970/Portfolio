@@ -2131,3 +2131,70 @@ a {
   }
 
 }
+
+/* ========================================
+   FINAL RESUME HERO FIX
+======================================== */
+
+@media (min-width: 981px) {
+
+  .resume-hero {
+    display: block !important;
+
+    max-width: none !important;
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+      5rem
+      var(--page-pad)
+      5.5rem;
+  }
+
+  .resume-hero > div:first-child {
+    max-width: 1500px !important;
+
+    margin: 0;
+  }
+
+  .resume-hero h1 {
+    max-width: 1500px;
+
+    margin: 0;
+
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+
+    font-size: clamp(4rem, 6vw, 7rem);
+    line-height: .92;
+    letter-spacing: -.04em;
+  }
+
+  .resume-hero h1 em {
+    display: inline;
+
+    color: var(--sage);
+
+    font-weight: 400;
+  }
+
+  .resume-hero-copy {
+    display: block !important;
+
+    max-width: 760px !important;
+
+    margin: 2.5rem 0 0 !important;
+
+    font-size: 1.2rem;
+  }
+
+  .resume-hero-copy > p {
+    margin: 0;
+  }
+
+  .resume-actions {
+    margin-top: 2rem;
+  }
+
+}
