@@ -1422,23 +1422,22 @@ a {
 }
 
 .resume-list {
+  max-width: 1450px;
+
   border-top: 2px solid var(--night-sky);
 }
 
 .resume-item {
   display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
 
-  grid-template-columns:
-    minmax(180px, .32fr)
-    minmax(0, 1fr);
-
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: 2.5rem;
 
   padding: 3rem 0;
 
   border-bottom:
     1px solid
-    rgba(29,74,86,.25);
+    rgba(29, 74, 86, .25);
 }
 
 .resume-item-meta {
