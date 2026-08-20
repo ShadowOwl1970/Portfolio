@@ -493,6 +493,10 @@ a {
     var(--sunset);
 }
 
+.card-rivers .card-number {
+  color: var(--night-sky);
+}
+
 .card-meta {
   display: flex;
   align-items: start;
@@ -535,20 +539,22 @@ a {
 .card-number {
   position: absolute;
   top: 1rem;
-  left: 1.2rem;
+  right: 1.2rem;
+  left: auto;
   z-index: 2;
 
   font-family: "Bebas Neue", sans-serif;
   font-size: 1rem;
+  font-weight: 600;
   letter-spacing: .08em;
 
-  padding: .3rem .6rem;
+  padding: 0;
 
-  background: var(--moonlight);
-  color: var(--night-sky);
+  background: transparent;
+  color: var(--moonlight);
 
-  border: 2px solid var(--night-sky);
-  border-radius: 999px;
+  border: none;
+  border-radius: 0;
 }
 
 .card-title-overlay {
