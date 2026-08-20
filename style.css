@@ -1856,10 +1856,9 @@ a {
 
   /* Resume */
 
-  .resume-hero,
   .resume-education {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr;
+}
 
   .resume-item {
     grid-template-columns: 1fr;
@@ -2077,28 +2076,20 @@ a {
   /* Resume */
 
   .resume-hero {
-    grid-template-columns: 1fr;
+  padding-top: 4rem;
+}
 
-    padding-top: 4rem;
-  }
+.resume-hero h1 {
+  font-size: clamp(3.6rem, 15vw, 5.8rem);
+}
 
-  .resume-hero h1 {
-    font-size:
-      clamp(3.6rem, 15vw, 5.8rem);
-  }
+.resume-skill-grid {
+  grid-template-columns: 1fr;
+}
 
-  .resume-skill-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .resume-item {
-    padding: 2.25rem 0;
-  }
-
-  .resume-actions {
-    align-items: flex-start;
-  }
-
+.resume-item {
+  padding: 2.25rem 0;
+}
 
   /* Footer */
 
