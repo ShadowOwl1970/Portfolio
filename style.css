@@ -975,6 +975,470 @@ a {
     var(--night-sky);
 }
 
+/* ========================================
+   PROJECT LIBRARY
+======================================== */
+
+.projects-hero {
+  max-width: 1300px;
+
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad)
+    clamp(4rem, 7vw, 7rem);
+}
+
+.projects-hero h1 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+
+  font-size:
+    clamp(4rem, 8vw, 8rem);
+
+  line-height: .9;
+  letter-spacing: -.04em;
+}
+
+.projects-hero h1 em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+.projects-hero > p:last-child {
+  max-width: 720px;
+
+  margin-top: 2rem;
+
+  font-size: 1.2rem;
+}
+
+
+/* Shelf */
+
+.project-shelf {
+  padding:
+    clamp(4rem, 7vw, 7rem)
+    0;
+
+  overflow: hidden;
+}
+
+.project-shelf:nth-of-type(even) {
+  background: var(--egg-shell);
+}
+
+.project-shelf-header {
+  display: flex;
+
+  align-items: end;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding:
+    0
+    var(--page-pad)
+    2.5rem;
+}
+
+.project-shelf-header h2 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size:
+    clamp(2.6rem, 5vw, 4.8rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* Controls */
+
+.carousel-controls {
+  display: flex;
+
+  gap: .6rem;
+}
+
+.carousel-button {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  background: var(--moonlight);
+
+  color: var(--night-sky);
+
+  border:
+    2px solid
+    var(--night-sky);
+
+  border-radius: 50%;
+
+  font-size: 1.3rem;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  background: var(--night-sky);
+
+  color: white;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* Carousel */
+
+.project-carousel {
+  display: flex;
+
+  gap:
+    clamp(1rem, 2vw, 2rem);
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type:
+    x mandatory;
+
+  scrollbar-width: none;
+
+  padding:
+    .5rem
+    var(--page-pad)
+    2rem;
+}
+
+.project-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Product-like card */
+
+.catalog-card {
+  flex:
+    0 0
+    clamp(270px, 31vw, 430px);
+
+  scroll-snap-align: start;
+}
+
+.catalog-card > a {
+  display: block;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* Image area */
+
+.catalog-image {
+  position: relative;
+
+  aspect-ratio: 4 / 3;
+
+  display: flex;
+  align-items: end;
+
+  padding: 1.5rem;
+
+  overflow: hidden;
+
+  border:
+    2px solid
+    var(--night-sky);
+
+  border-radius: var(--radius);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.catalog-card:hover
+.catalog-image {
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    7px 7px 0
+    var(--night-sky);
+}
+
+
+/* Temporary project titles */
+
+.catalog-placeholder {
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size:
+    clamp(2rem, 3vw, 3.2rem);
+
+  line-height: .95;
+}
+
+
+/* Featured badge */
+
+.catalog-label {
+  position: absolute;
+
+  top: 1rem;
+  left: 1rem;
+
+  padding:
+    .35rem
+    .7rem;
+
+  background: var(--sunset);
+
+  border:
+    2px solid
+    var(--night-sky);
+
+  border-radius: 999px;
+
+  font-family:
+    "Bebas Neue",
+    sans-serif;
+
+  letter-spacing: .08em;
+
+  box-shadow:
+    3px 3px 0
+    var(--night-sky);
+}
+
+
+/* Project info */
+
+.catalog-info {
+  display: flex;
+
+  align-items: start;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding:
+    1rem
+    .1rem
+    0;
+}
+
+.catalog-info p {
+  margin: 0 0 .3rem;
+
+  font-family:
+    "Bebas Neue",
+    sans-serif;
+
+  font-size: .9rem;
+
+  letter-spacing: .07em;
+}
+
+.catalog-info h3 {
+  margin: 0;
+
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size: 1.4rem;
+
+  font-weight: 400;
+}
+
+.catalog-arrow {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    2px solid
+    var(--night-sky);
+
+  border-radius: 50%;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.catalog-card:hover
+.catalog-arrow {
+  background: var(--night-sky);
+
+  color: white;
+
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* Temporary project colors */
+
+.hearth-card {
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(44,166,164,.3),
+      transparent 30%
+    ),
+    var(--egg-shell);
+}
+
+.rivers-card {
+  background: var(--sunset);
+}
+
+.phoenix-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--sunset),
+      var(--egg-shell)
+    );
+}
+
+.alter-catalog-card {
+  background:
+    linear-gradient(
+      145deg,
+      #3B3FAE,
+      var(--night-sky)
+    );
+
+  color: white;
+}
+
+.suklaa-catalog-card {
+  background: #1E2332;
+
+  color: #F6CF6E;
+}
+
+.podtopia-card {
+  background: var(--sage);
+
+  color: white;
+}
+
+.quest-card {
+  background: var(--egg-shell);
+}
+
+.bakery-card {
+  background:
+    linear-gradient(
+      145deg,
+      #f1d6bf,
+      var(--moonlight)
+    );
+}
+
+.character-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--night-sky),
+      var(--sage)
+    );
+
+  color: white;
+}
+
+.illustration-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--sunset),
+      var(--egg-shell)
+    );
+}
+
+
+/* Bottom CTA */
+
+.projects-cta {
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
+  background: var(--sunset);
+
+  text-align: center;
+}
+
+.projects-cta h2 {
+  max-width: 850px;
+
+  margin:
+    0
+    auto;
+
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size:
+    clamp(3rem, 5vw, 5.5rem);
+
+  font-weight: 400;
+
+  line-height: .98;
+}
+
+.projects-cta h2 em {
+  display: block;
+
+  font-weight: 400;
+}
+
+.projects-cta > p:last-child {
+  max-width: 600px;
+
+  margin:
+    1.5rem
+    auto
+    0;
+
+  font-size: 1.1rem;
+}
+
 
 /* ========================================
    ABOUT PAGE
