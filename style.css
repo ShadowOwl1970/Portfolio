@@ -33,7 +33,6 @@ html {
 
 body {
   margin: 0;
-
   background: var(--moonlight);
   color: var(--night-sky);
 
@@ -58,10 +57,8 @@ a {
 
 .skip-link {
   position: fixed;
-
   left: 1rem;
   top: -4rem;
-
   z-index: 1000;
 
   padding: .75rem 1rem;
@@ -102,7 +99,6 @@ a {
 .site-header {
   position: sticky;
   top: 0;
-
   z-index: 100;
 
   min-height: 84px;
@@ -143,7 +139,6 @@ a {
 .brand-mark {
   width: 100%;
   height: 100%;
-
   object-fit: contain;
 }
 
@@ -158,7 +153,6 @@ a {
 
 .site-nav a {
   position: relative;
-
   text-decoration: none;
 }
 
@@ -214,118 +208,6 @@ a {
 
 
 /* ========================================
-   HOMEPAGE HERO
-======================================== */
-
-.hero {
-  min-height: calc(100svh - 84px);
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(320px, .95fr);
-
-  align-items: center;
-
-  gap: clamp(2rem, 5vw, 7rem);
-
-  padding:
-    clamp(4rem, 8vw, 8rem)
-    var(--page-pad)
-    clamp(2rem, 6vw, 5rem);
-
-  overflow: hidden;
-}
-
-.hero-copy {
-  position: relative;
-
-  z-index: 2;
-}
-
-.eyebrow {
-  margin: 0 0 1rem;
-
-  text-transform: uppercase;
-
-  letter-spacing: .16em;
-
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.05rem;
-}
-
-.hero h1 {
-  margin: 0;
-
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-
-  font-size:
-    clamp(4.2rem, 9.5vw, 9.5rem);
-
-  line-height: .82;
-
-  letter-spacing: -.055em;
-}
-
-.hero h1 span {
-  display: block;
-
-  color: var(--sage);
-
-  font-style: italic;
-}
-
-.role {
-  display: inline-block;
-
-  margin: 2rem 0 0;
-
-  padding: .55rem 1rem;
-
-  background: var(--sunset);
-
-  border: 2px solid var(--night-sky);
-  border-radius: 999px;
-
-  box-shadow:
-    4px 4px 0
-    var(--night-sky);
-
-  font-family: "Bebas Neue", sans-serif;
-
-  font-size:
-    clamp(1.25rem, 2vw, 1.7rem);
-
-  letter-spacing: .04em;
-
-  white-space: nowrap;
-}
-
-.hero-intro {
-  max-width: 610px;
-
-  margin: 2rem 0 0;
-
-  font-size:
-    clamp(1.15rem, 2vw, 1.45rem);
-
-  font-weight: 500;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  gap: 1.4rem;
-
-  margin-top: 2.2rem;
-}
-
-
-/* ========================================
    BUTTONS / LINKS
 ======================================== */
 
@@ -358,8 +240,7 @@ a {
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  transform:
-    translate(3px, 3px);
+  transform: translate(3px, 3px);
 
   box-shadow:
     3px 3px 0
@@ -368,8 +249,113 @@ a {
 
 .text-link {
   font-weight: 800;
-
   text-underline-offset: .25rem;
+}
+
+
+/* ========================================
+   HOMEPAGE HERO
+======================================== */
+
+.hero {
+  min-height: calc(100svh - 84px);
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(320px, .95fr);
+
+  align-items: center;
+
+  gap: clamp(2rem, 5vw, 7rem);
+
+  padding:
+    clamp(4rem, 8vw, 8rem)
+    var(--page-pad)
+    clamp(2rem, 6vw, 5rem);
+
+  overflow: hidden;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+
+  text-transform: uppercase;
+  letter-spacing: .16em;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.05rem;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+
+  font-size: clamp(4.2rem, 9.5vw, 9.5rem);
+
+  line-height: .82;
+  letter-spacing: -.055em;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: var(--sage);
+
+  font-style: italic;
+}
+
+.role {
+  display: inline-block;
+
+  margin: 2rem 0 0;
+
+  padding: .55rem 1rem;
+
+  background: var(--sunset);
+
+  border: 2px solid var(--night-sky);
+  border-radius: 999px;
+
+  box-shadow:
+    4px 4px 0
+    var(--night-sky);
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+
+  letter-spacing: .04em;
+
+  white-space: nowrap;
+}
+
+.hero-intro {
+  max-width: 610px;
+
+  margin: 2rem 0 0;
+
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 1.4rem;
+
+  margin-top: 2.2rem;
 }
 
 
@@ -389,13 +375,11 @@ a {
 
 .owl {
   position: relative;
-
   z-index: 2;
 
   width: min(650px, 100%);
 
-  transform-origin:
-    50% 100%;
+  transform-origin: 50% 100%;
 
   animation:
     owlFloat
@@ -421,7 +405,6 @@ a {
 
 .bubble {
   position: absolute;
-
   z-index: 3;
 
   padding: .65rem 1rem;
@@ -466,13 +449,8 @@ a {
 
   background: var(--sunset);
 
-  border-top:
-    2px solid
-    var(--night-sky);
-
-  border-bottom:
-    2px solid
-    var(--night-sky);
+  border-top: 2px solid var(--night-sky);
+  border-bottom: 2px solid var(--night-sky);
 }
 
 .marquee-track {
@@ -493,8 +471,7 @@ a {
 
   font-family: "Bebas Neue", sans-serif;
 
-  font-size:
-    clamp(1.4rem, 2.4vw, 2rem);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
 
   letter-spacing: .04em;
 }
@@ -505,8 +482,7 @@ a {
 
 @keyframes marquee {
   to {
-    transform:
-      translateX(-30%);
+    transform: translateX(-30%);
   }
 }
 
@@ -545,8 +521,7 @@ a {
 
   font-weight: 400;
 
-  font-size:
-    clamp(2.8rem, 5vw, 5.2rem);
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
 
   line-height: .98;
 
@@ -575,12 +550,9 @@ a {
 
   gap: clamp(2rem, 5vw, 5rem);
 
-  padding:
-    clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.5rem, 3vw, 3rem);
 
-  border:
-    2px solid
-    var(--night-sky);
+  border: 2px solid var(--night-sky);
 
   border-radius: var(--radius);
 
@@ -623,8 +595,7 @@ a {
 
   font-weight: 400;
 
-  font-size:
-    clamp(3.8rem, 7vw, 7rem);
+  font-size: clamp(3.8rem, 7vw, 7rem);
 
   line-height: .9;
 }
@@ -647,9 +618,7 @@ a {
 .project-tags span {
   padding: .35rem .7rem;
 
-  border:
-    1.5px solid
-    var(--night-sky);
+  border: 1.5px solid var(--night-sky);
 
   border-radius: 999px;
 
@@ -672,8 +641,7 @@ a {
   display: grid;
   place-items: center;
 
-  border-radius:
-    calc(var(--radius) - .3rem);
+  border-radius: calc(var(--radius) - .3rem);
 
   background:
     radial-gradient(
@@ -706,9 +674,7 @@ a {
 
   padding: 2rem;
 
-  border:
-    2px dashed
-    var(--night-sky);
+  border: 2px dashed var(--night-sky);
 
   border-radius: 1rem;
 
@@ -718,8 +684,7 @@ a {
 .placeholder-inner strong {
   font-family: "DM Serif Display", serif;
 
-  font-size:
-    clamp(2.2rem, 5vw, 4.5rem);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
 
   font-weight: 400;
 }
@@ -730,16 +695,14 @@ a {
 ======================================== */
 
 .project-grid {
-  margin-top:
-    clamp(3rem, 6vw, 6rem);
+  margin-top: clamp(3rem, 6vw, 6rem);
 
   display: grid;
 
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap:
-    clamp(1.25rem, 2.5vw, 2.5rem);
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
 }
 
 .project-card {
@@ -766,9 +729,7 @@ a {
 
   overflow: hidden;
 
-  border:
-    2px solid
-    var(--night-sky);
+  border: 2px solid var(--night-sky);
 
   border-radius: 1.2rem;
 
@@ -778,32 +739,23 @@ a {
 }
 
 .project-card:hover .card-visual {
-  transform:
-    translateY(-6px);
+  transform: translateY(-6px);
 
   box-shadow:
     8px 8px 0
     var(--night-sky);
 }
 
-
-/* Project title only — not all spans */
-
 .card-title-overlay {
   position: relative;
-
   z-index: 2;
 
   font-family: "DM Serif Display", serif;
 
-  font-size:
-    clamp(2.1rem, 3vw, 3.3rem);
+  font-size: clamp(2.1rem, 3vw, 3.3rem);
 
   line-height: .95;
 }
-
-
-/* Small project number */
 
 .card-number {
   position: absolute;
@@ -886,8 +838,7 @@ a {
 
   gap: 1rem;
 
-  padding:
-    1rem .15rem 0;
+  padding: 1rem .15rem 0;
 }
 
 .card-meta p,
@@ -936,9 +887,7 @@ a {
   display: grid;
   place-items: center;
 
-  border:
-    2px solid
-    var(--night-sky);
+  border: 2px solid var(--night-sky);
 
   border-radius: 50%;
 
@@ -971,8 +920,7 @@ a {
   grid-template-columns:
     1.1fr .9fr;
 
-  gap:
-    clamp(3rem, 8vw, 8rem);
+  gap: clamp(3rem, 8vw, 8rem);
 
   background: var(--sage);
 
@@ -1020,8 +968,7 @@ a {
 
 .about-button:hover,
 .about-button:focus-visible {
-  transform:
-    translate(3px, 3px);
+  transform: translate(3px, 3px);
 
   box-shadow:
     2px 2px 0
@@ -1045,8 +992,7 @@ a {
 
   align-items: center;
 
-  gap:
-    clamp(3rem, 7vw, 8rem);
+  gap: clamp(3rem, 7vw, 8rem);
 
   padding:
     clamp(5rem, 9vw, 9rem)
@@ -1064,8 +1010,7 @@ a {
 
   font-weight: 400;
 
-  font-size:
-    clamp(4rem, 7vw, 7.5rem);
+  font-size: clamp(4rem, 7vw, 7.5rem);
 
   line-height: .94;
 
@@ -1085,16 +1030,12 @@ a {
 
   margin-top: 2rem;
 
-  font-size:
-    clamp(1.15rem, 2vw, 1.4rem);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
 
   font-weight: 500;
 
   line-height: 1.7;
 }
-
-
-/* Portrait card */
 
 .about-portrait-placeholder {
   position: relative;
@@ -1106,9 +1047,7 @@ a {
 
   background: var(--egg-shell);
 
-  border:
-    2px solid
-    var(--night-sky);
+  border: 2px solid var(--night-sky);
 
   border-radius: var(--radius);
 
@@ -1158,17 +1097,13 @@ a {
     rotate(-4deg);
 }
 
-
-/* About story */
-
 .about-story {
   display: grid;
 
   grid-template-columns:
     1fr 1fr;
 
-  gap:
-    clamp(4rem, 9vw, 10rem);
+  gap: clamp(4rem, 9vw, 10rem);
 
   padding:
     clamp(6rem, 10vw, 10rem)
@@ -1189,8 +1124,7 @@ a {
 
   font-weight: 400;
 
-  font-size:
-    clamp(3rem, 5vw, 5.5rem);
+  font-size: clamp(3rem, 5vw, 5.5rem);
 
   line-height: .98;
 
@@ -1216,9 +1150,6 @@ a {
   margin-top: 0;
   margin-bottom: 1.4rem;
 }
-
-
-/* About services */
 
 .about-services {
   padding:
@@ -1248,9 +1179,7 @@ a {
 
   background: var(--egg-shell);
 
-  border:
-    2px solid
-    var(--night-sky);
+  border: 2px solid var(--night-sky);
 
   border-radius: var(--radius);
 
@@ -1260,8 +1189,7 @@ a {
 }
 
 .service-card:hover {
-  transform:
-    translateY(-6px);
+  transform: translateY(-6px);
 
   box-shadow:
     8px 8px 0
@@ -1295,17 +1223,13 @@ a {
   margin: 0;
 }
 
-
-/* About skills */
-
 .skills-section {
   display: grid;
 
   grid-template-columns:
     .8fr 1.2fr;
 
-  gap:
-    clamp(4rem, 8vw, 8rem);
+  gap: clamp(4rem, 8vw, 8rem);
 
   padding:
     clamp(6rem, 10vw, 10rem)
@@ -1348,17 +1272,13 @@ a {
     rgba(29,74,86,.14);
 }
 
-
-/* About experience */
-
 .experience-preview {
   display: grid;
 
   grid-template-columns:
     1fr 1fr;
 
-  gap:
-    clamp(4rem, 9vw, 10rem);
+  gap: clamp(4rem, 9vw, 10rem);
 
   padding:
     clamp(6rem, 10vw, 10rem)
@@ -1375,9 +1295,6 @@ a {
   margin-top: 0;
   margin-bottom: 1.3rem;
 }
-
-
-/* About CTA */
 
 .about-cta {
   padding:
@@ -1424,13 +1341,9 @@ a {
    RESUME PAGE
 ======================================== */
 
-/* ========================================
-   RESUME PAGE
-======================================== */
-
 .resume-hero {
   padding:
-    clamp(4rem, 6vw, 6rem)
+    clamp(4.5rem, 7vw, 7rem)
     var(--page-pad)
     clamp(4rem, 6vw, 6rem);
 }
@@ -1443,15 +1356,19 @@ a {
   margin: 0;
 
   font-family: "DM Serif Display", serif;
+
   font-weight: 400;
 
   font-size: clamp(4rem, 6.5vw, 7rem);
+
   line-height: .92;
+
   letter-spacing: -.04em;
 }
 
 .resume-hero h1 em {
   color: var(--sage);
+
   font-weight: 400;
 }
 
@@ -1477,9 +1394,6 @@ a {
   margin-top: 2rem;
 }
 
-
-/* Resume experience */
-
 .resume-section {
   padding:
     clamp(6rem, 10vw, 10rem)
@@ -1502,26 +1416,23 @@ a {
 
   font-weight: 400;
 
-  font-size:
-    clamp(3rem, 5vw, 5rem);
+  font-size: clamp(3rem, 5vw, 5rem);
 
   line-height: .98;
 }
 
 .resume-list {
-  border-top:
-    2px solid
-    var(--night-sky);
+  border-top: 2px solid var(--night-sky);
 }
 
 .resume-item {
   display: grid;
 
   grid-template-columns:
-    .35fr 1fr;
+    minmax(180px, .32fr)
+    minmax(0, 1fr);
 
-  gap:
-    clamp(2rem, 6vw, 6rem);
+  gap: clamp(2rem, 5vw, 5rem);
 
   padding: 3rem 0;
 
@@ -1534,10 +1445,12 @@ a {
   font-family: "Bebas Neue", sans-serif;
 
   letter-spacing: .07em;
+
+  font-size: 1rem;
 }
 
 .resume-item-content {
-  max-width: 850px;
+  max-width: 900px;
 }
 
 .resume-item-content h3 {
@@ -1545,8 +1458,7 @@ a {
 
   font-family: "DM Serif Display", serif;
 
-  font-size:
-    clamp(2rem, 3vw, 3rem);
+  font-size: clamp(2rem, 3vw, 3rem);
 
   font-weight: 400;
 }
@@ -1570,9 +1482,6 @@ a {
   margin-bottom: .7rem;
 }
 
-
-/* Resume education */
-
 .resume-education {
   display: grid;
 
@@ -1581,8 +1490,7 @@ a {
 
   align-items: center;
 
-  gap:
-    clamp(4rem, 8vw, 9rem);
+  gap: clamp(4rem, 8vw, 9rem);
 
   padding:
     clamp(6rem, 10vw, 10rem)
@@ -1600,16 +1508,13 @@ a {
 }
 
 .education-card {
-  padding:
-    clamp(2rem, 4vw, 3rem);
+  padding: clamp(2rem, 4vw, 3rem);
 
   background: var(--moonlight);
 
   color: var(--night-sky);
 
-  border:
-    2px solid
-    var(--night-sky);
+  border: 2px solid var(--night-sky);
 
   border-radius: var(--radius);
 
@@ -1633,8 +1538,7 @@ a {
 
   font-family: "DM Serif Display", serif;
 
-  font-size:
-    clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
 
   font-weight: 400;
 }
@@ -1646,9 +1550,6 @@ a {
 .education-card span {
   font-weight: 700;
 }
-
-
-/* Resume skills */
 
 .resume-skills {
   padding:
@@ -1662,8 +1563,7 @@ a {
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap:
-    clamp(1.5rem, 3vw, 3rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
 }
 
 .resume-skill-grid article {
@@ -1671,9 +1571,7 @@ a {
 
   background: var(--moonlight);
 
-  border:
-    2px solid
-    var(--night-sky);
+  border: 2px solid var(--night-sky);
 
   border-radius: var(--radius);
 
@@ -1683,8 +1581,7 @@ a {
 }
 
 .resume-skill-grid article:hover {
-  transform:
-    translateY(-5px);
+  transform: translateY(-5px);
 
   box-shadow:
     7px 7px 0
@@ -1715,9 +1612,6 @@ a {
     1px solid
     rgba(29,74,86,.15);
 }
-
-
-/* Resume CTA */
 
 .resume-cta {
   padding:
@@ -1829,9 +1723,6 @@ a {
       1fr 1fr;
   }
 
-
-  /* About */
-
   .about-hero,
   .about-story,
   .skills-section,
@@ -1853,24 +1744,20 @@ a {
     min-height: 500px;
   }
 
-
-  /* Resume */
-
-  .resume-education {
-  grid-template-columns: 1fr;
-}
-
   .resume-item {
     grid-template-columns: 1fr;
 
     gap: 1rem;
   }
 
+  .resume-education {
+    grid-template-columns: 1fr;
+  }
+
   .resume-skill-grid {
     grid-template-columns:
       1fr 1fr;
   }
-
 }
 
 
@@ -1898,9 +1785,6 @@ a {
     width: 50px;
     height: 50px;
   }
-
-
-  /* Mobile menu */
 
   .menu-toggle {
     display: block;
@@ -1946,8 +1830,7 @@ a {
 
     font-family: "DM Serif Display", serif;
 
-    font-size:
-      clamp(2.8rem, 12vw, 4.5rem);
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
 
     line-height: 1;
   }
@@ -1985,9 +1868,6 @@ a {
       rotate(-45deg);
   }
 
-
-  /* Hero */
-
   .hero {
     min-height: auto;
 
@@ -2017,9 +1897,6 @@ a {
     white-space: normal;
   }
 
-
-  /* Work */
-
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -2031,9 +1908,6 @@ a {
   .project-placeholder {
     min-height: 320px;
   }
-
-
-  /* About */
 
   .about-hero {
     min-height: auto;
@@ -2072,31 +1946,30 @@ a {
     gap: 3rem;
   }
 
-
-  /* Resume */
-
   .resume-hero {
-  padding-top: 4rem;
-}
+    padding-top: 4rem;
+  }
 
-.resume-hero h1 {
-  font-size: clamp(3.6rem, 15vw, 5.8rem);
-}
+  .resume-hero h1 {
+    font-size:
+      clamp(3.6rem, 15vw, 5.8rem);
+  }
 
-.resume-skill-grid {
-  grid-template-columns: 1fr;
-}
+  .resume-skill-grid {
+    grid-template-columns: 1fr;
+  }
 
-.resume-item {
-  padding: 2.25rem 0;
-}
+  .resume-item {
+    padding: 2.25rem 0;
+  }
 
-  /* Footer */
+  .resume-actions {
+    align-items: flex-start;
+  }
 
   .footer-bottom {
     flex-direction: column;
   }
-
 }
 
 
@@ -2111,14 +1984,10 @@ a {
   *::after {
     scroll-behavior: auto !important;
 
-    animation-duration:
-      .001ms !important;
+    animation-duration: .001ms !important;
 
-    animation-iteration-count:
-      1 !important;
+    animation-iteration-count: 1 !important;
 
-    transition-duration:
-      .001ms !important;
+    transition-duration: .001ms !important;
   }
-
 }
