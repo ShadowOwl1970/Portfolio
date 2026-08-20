@@ -594,6 +594,32 @@ a {
   color: white;
 }
 
+.about-heading {
+  align-self: start;
+}
+
+.about-copy {
+  align-self: end;
+}
+
+.about-copy p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.about-button {
+  margin-top: 1rem;
+  background: var(--moonlight);
+  color: var(--night-sky);
+  box-shadow: 5px 5px 0 var(--night-sky);
+}
+
+.about-button:hover,
+.about-button:focus-visible {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--night-sky);
+}
+
 .about-preview {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
