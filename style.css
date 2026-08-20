@@ -516,6 +516,78 @@ a {
   font-size: 1.5rem;
 }
 
+.project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-visual {
+  position: relative;
+}
+
+.card-number {
+  position: absolute;
+  top: 1rem;
+  left: 1.2rem;
+  z-index: 2;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  letter-spacing: .08em;
+
+  padding: .3rem .6rem;
+
+  background: var(--moonlight);
+  color: var(--night-sky);
+
+  border: 2px solid var(--night-sky);
+  border-radius: 999px;
+}
+
+.card-title-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.card-description {
+  display: block;
+  max-width: 32ch;
+  margin-top: .6rem;
+
+  font-size: .95rem;
+  line-height: 1.5;
+  font-weight: 500;
+  opacity: .85;
+}
+
+.card-arrow {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border: 2px solid var(--night-sky);
+  border-radius: 50%;
+
+  font-size: 1.2rem;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    color .2s ease;
+}
+
+.project-card-link:hover .card-arrow,
+.project-card-link:focus-visible .card-arrow {
+  transform: translate(4px, -4px);
+  background: var(--night-sky);
+  color: white;
+}
+
 .about-preview {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
