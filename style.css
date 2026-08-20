@@ -2038,6 +2038,18 @@ a {
   }
 }
 
+.contact-hero {
+  grid-template-columns: 1fr;
+}
+
+.contact-card {
+  min-height: 420px;
+}
+
+.contact-detail-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
 
 /* ========================================
    MOBILE
@@ -2248,6 +2260,36 @@ a {
   .footer-bottom {
     flex-direction: column;
   }
+}
+
+.contact-hero {
+  padding-top: 4rem;
+}
+
+.contact-heading h1 {
+  font-size:
+    clamp(3.6rem, 15vw, 5.8rem);
+}
+
+.contact-card {
+  min-height: 380px;
+}
+
+.contact-primary {
+  font-size: 1.35rem;
+
+  word-break: break-word;
+}
+
+.contact-owl {
+  width: 140px;
+
+  right: -25px;
+  bottom: -70px;
+}
+
+.contact-detail-grid {
+  grid-template-columns: 1fr;
 }
 
 
