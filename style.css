@@ -86,8 +86,8 @@ a {
 }
 
 .brand {
-  width: 58px;
-  height: 58px;
+  width: 72px;
+  height: 72px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -193,6 +193,7 @@ a {
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(1.25rem, 2vw, 1.7rem);
   letter-spacing: .04em;
+  white-space: nowrap;
 }
 
 .hero-intro {
@@ -273,8 +274,8 @@ a {
 }
 
 .bubble-hi {
-  top: 10%;
-  left: 5%;
+  top: 18%;
+  left: 24%;
   font-size: 1.8rem;
 }
 
