@@ -1635,6 +1635,294 @@ a {
   justify-content: center;
 }
 
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-hero {
+  display: grid;
+
+  grid-template-columns:
+    1.05fr .95fr;
+
+  align-items: center;
+
+  gap: clamp(4rem, 8vw, 9rem);
+
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad);
+}
+
+.contact-heading {
+  max-width: 900px;
+}
+
+.contact-heading h1 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(4rem, 7vw, 7.5rem);
+
+  font-weight: 400;
+
+  line-height: .92;
+
+  letter-spacing: -.04em;
+}
+
+.contact-heading h1 em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+.contact-lead {
+  max-width: 680px;
+
+  margin-top: 2rem;
+
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+
+  font-weight: 500;
+}
+
+
+/* Contact card */
+
+.contact-card {
+  position: relative;
+
+  min-height: 470px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: clamp(2rem, 4vw, 3rem);
+
+  background: var(--egg-shell);
+
+  border: 2px solid var(--night-sky);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    10px 10px 0
+    var(--night-sky);
+
+  overflow: hidden;
+}
+
+.contact-card-label {
+  margin: 0 0 1.5rem;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  letter-spacing: .1em;
+}
+
+.contact-primary {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom:
+    2px solid
+    var(--night-sky);
+
+  text-decoration: none;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+
+  line-height: 1.2;
+}
+
+.contact-primary:hover {
+  color: var(--sunset);
+}
+
+
+/* Social links */
+
+.contact-links {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 1.5rem;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: .8rem 0;
+
+  border-bottom:
+    1px solid
+    rgba(29,74,86,.2);
+
+  text-decoration: none;
+
+  font-weight: 700;
+}
+
+.contact-links a:hover {
+  color: var(--sunset);
+}
+
+
+/* Owl cameo */
+
+.contact-owl {
+  position: absolute;
+
+  width: 180px;
+
+  right: -35px;
+  bottom: -90px;
+
+  opacity: .95;
+
+  transform: rotate(-7deg);
+
+  transition: transform .25s ease;
+}
+
+.contact-card:hover .contact-owl {
+  transform:
+    translateY(-18px)
+    rotate(-4deg);
+}
+
+
+/* Contact details */
+
+.contact-details {
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
+  background: var(--sage);
+
+  color: white;
+}
+
+.contact-details > div:first-child {
+  max-width: 900px;
+}
+
+.contact-details h2,
+.contact-cta h2 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(3rem, 5vw, 5.5rem);
+
+  font-weight: 400;
+
+  line-height: .98;
+
+  letter-spacing: -.03em;
+}
+
+.contact-details h2 em,
+.contact-cta h2 em {
+  font-weight: 400;
+}
+
+.contact-detail-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1.5rem;
+
+  margin-top: 4rem;
+}
+
+.contact-detail-grid article {
+  padding: 2rem;
+
+  background: var(--moonlight);
+
+  color: var(--night-sky);
+
+  border: 2px solid var(--night-sky);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    6px 6px 0
+    var(--night-sky);
+}
+
+.contact-detail-grid h3 {
+  margin: 0 0 .75rem;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+}
+
+.contact-detail-grid p {
+  margin: 0;
+}
+
+
+/* Contact CTA */
+
+.contact-cta {
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
+  background: var(--sunset);
+
+  text-align: center;
+}
+
+.contact-cta h2 {
+  max-width: 850px;
+
+  margin-inline: auto;
+}
+
+.contact-cta h2 em {
+  display: block;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+
+  margin-top: 2.5rem;
+}
 
 /* ========================================
    FOOTER
