@@ -676,6 +676,369 @@ a {
   font-size: .9rem;
 }
 
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+.about-hero {
+  position: relative;
+
+  min-height: 760px;
+
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+
+  gap: clamp(3rem, 7vw, 8rem);
+
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad);
+}
+
+.about-hero-copy {
+  max-width: 900px;
+}
+
+.about-hero h1 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+
+  font-size: clamp(4rem, 7vw, 7.5rem);
+  line-height: .94;
+  letter-spacing: -.04em;
+}
+
+.about-hero h1 em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+.about-lead {
+  max-width: 680px;
+
+  margin-top: 2rem;
+
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+
+/* Portrait */
+
+.about-portrait-placeholder {
+  position: relative;
+
+  min-height: 580px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--egg-shell);
+
+  border: 2px solid var(--night-sky);
+  border-radius: var(--radius);
+
+  box-shadow: 10px 10px 0 var(--night-sky);
+
+  overflow: hidden;
+}
+
+.about-portrait-placeholder > div {
+  text-align: center;
+
+  opacity: .55;
+}
+
+.about-portrait-placeholder span {
+  display: block;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+}
+
+.about-portrait-placeholder p {
+  margin-top: .3rem;
+}
+
+
+/* Owl peeking from portrait */
+
+.about-peek-owl {
+  position: absolute;
+
+  width: 190px;
+
+  right: -25px;
+  bottom: -85px;
+
+  transform: rotate(-7deg);
+
+  transition: transform .25s ease;
+}
+
+.about-portrait-placeholder:hover .about-peek-owl {
+  transform:
+    translateY(-18px)
+    rotate(-4deg);
+}
+
+
+/* Story */
+
+.about-story {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: clamp(4rem, 9vw, 10rem);
+
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
+  background: var(--sage);
+
+  color: white;
+}
+
+.story-heading h2,
+.skills-section h2,
+.experience-preview h2,
+.about-cta h2 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+
+  font-size: clamp(3rem, 5vw, 5.5rem);
+
+  line-height: .98;
+  letter-spacing: -.03em;
+}
+
+.story-heading h2 em,
+.skills-section h2 em,
+.experience-preview h2 em,
+.about-cta h2 em {
+  font-weight: 400;
+}
+
+.story-copy {
+  align-self: end;
+
+  max-width: 700px;
+
+  font-size: 1.15rem;
+}
+
+.story-copy p {
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+}
+
+
+/* Services */
+
+.about-services {
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+}
+
+.service-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1.4rem;
+}
+
+.service-card {
+  position: relative;
+
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  padding: 1.7rem;
+
+  background: var(--egg-shell);
+
+  border: 2px solid var(--night-sky);
+  border-radius: var(--radius);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    8px 8px 0
+    var(--night-sky);
+}
+
+.service-number {
+  position: absolute;
+
+  top: 1.2rem;
+  right: 1.3rem;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 1rem;
+  letter-spacing: .08em;
+}
+
+.service-card h3 {
+  margin: 0 0 .6rem;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.service-card p {
+  margin: 0;
+}
+
+
+/* Skills */
+
+.skills-section {
+  display: grid;
+
+  grid-template-columns: .8fr 1.2fr;
+
+  gap: clamp(4rem, 8vw, 8rem);
+
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
+  background: var(--egg-shell);
+}
+
+.skills-columns {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+.skill-group h3 {
+  margin-top: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 1.3rem;
+
+  letter-spacing: .08em;
+}
+
+.skill-group ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.skill-group li {
+  padding: .45rem 0;
+
+  border-bottom:
+    1px solid
+    rgba(29,74,86,.14);
+}
+
+
+/* Experience */
+
+.experience-preview {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: clamp(4rem, 9vw, 10rem);
+
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+}
+
+.experience-copy {
+  align-self: end;
+
+  font-size: 1.1rem;
+}
+
+.experience-copy p {
+  margin-top: 0;
+  margin-bottom: 1.3rem;
+}
+
+
+/* CTA */
+
+.about-cta {
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
+  background: var(--sunset);
+
+  text-align: center;
+}
+
+.about-cta h2 {
+  max-width: 900px;
+
+  margin-inline: auto;
+}
+
+.about-cta h2 em {
+  display: block;
+}
+
+.about-cta > p:not(.eyebrow) {
+  max-width: 600px;
+
+  margin:
+    1.5rem auto 0;
+
+  font-size: 1.15rem;
+}
+
+.about-cta-actions {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+
+  margin-top: 2.5rem;
+}
+
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
