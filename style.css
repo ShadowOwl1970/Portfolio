@@ -2663,6 +2663,27 @@ a {
     min-height: 320px;
   }
 
+   .carousel-controls {
+  display: none;
+}
+
+.catalog-card {
+  flex-basis: 82vw;
+}
+
+.project-shelf-header {
+  align-items: start;
+}
+
+.projects-hero {
+  padding-top: 4rem;
+}
+
+.projects-hero h1 {
+  font-size:
+    clamp(3.8rem, 16vw, 6rem);
+}
+
   .about-hero {
     min-height: auto;
 
