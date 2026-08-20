@@ -1424,18 +1424,19 @@ a {
    RESUME PAGE
 ======================================== */
 
-.resume-hero {
-  max-width: 1500px;
-  margin: 0 auto;
+/* ========================================
+   RESUME PAGE
+======================================== */
 
+.resume-hero {
   padding:
-    clamp(4.5rem, 7vw, 7rem)
+    clamp(4rem, 6vw, 6rem)
     var(--page-pad)
-    clamp(4.5rem, 7vw, 6.5rem);
+    clamp(4rem, 6vw, 6rem);
 }
 
-.resume-hero > div:first-child {
-  max-width: 1150px;
+.resume-hero-inner {
+  max-width: 1200px;
 }
 
 .resume-hero h1 {
@@ -1444,26 +1445,25 @@ a {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
 
-  font-size: clamp(4rem, 6.7vw, 7.2rem);
+  font-size: clamp(4rem, 6.5vw, 7rem);
   line-height: .92;
   letter-spacing: -.04em;
 }
 
 .resume-hero h1 em {
-  display: inline;
   color: var(--sage);
   font-weight: 400;
 }
 
 .resume-hero-copy {
-  max-width: 760px;
+  max-width: 700px;
 
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 
   font-size: 1.2rem;
 }
 
-.resume-hero-copy > p {
+.resume-hero-copy p {
   margin: 0;
 }
 
@@ -2128,73 +2128,6 @@ a {
 
     transition-duration:
       .001ms !important;
-  }
-
-}
-
-/* ========================================
-   FINAL RESUME HERO FIX
-======================================== */
-
-@media (min-width: 981px) {
-
-  .resume-hero {
-    display: block !important;
-
-    max-width: none !important;
-    width: 100%;
-
-    margin: 0;
-
-    padding:
-      5rem
-      var(--page-pad)
-      5.5rem;
-  }
-
-  .resume-hero > div:first-child {
-    max-width: 1500px !important;
-
-    margin: 0;
-  }
-
-  .resume-hero h1 {
-    max-width: 1500px;
-
-    margin: 0;
-
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-
-    font-size: clamp(4rem, 6vw, 7rem);
-    line-height: .92;
-    letter-spacing: -.04em;
-  }
-
-  .resume-hero h1 em {
-    display: inline;
-
-    color: var(--sage);
-
-    font-weight: 400;
-  }
-
-  .resume-hero-copy {
-    display: block !important;
-
-    max-width: 760px !important;
-
-    margin: 2.5rem 0 0 !important;
-
-    font-size: 1.2rem;
-  }
-
-  .resume-hero-copy > p {
-    margin: 0;
-  }
-
-  .resume-actions {
-    margin-top: 2rem;
   }
 
 }
