@@ -1062,6 +1062,25 @@ a {
   }
 }
 
+.about-hero,
+.about-story,
+.skills-section,
+.experience-preview {
+  grid-template-columns: 1fr;
+}
+
+.service-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.skills-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-portrait-placeholder {
+  min-height: 500px;
+}
+
 @media (max-width: 720px) {
   .site-header {
     min-height: 72px;
@@ -1183,6 +1202,43 @@ a {
   .footer-bottom {
     flex-direction: column;
   }
+}
+
+.about-hero {
+  min-height: auto;
+
+  padding-top: 4rem;
+}
+
+.about-hero h1 {
+  font-size:
+    clamp(3.5rem, 15vw, 5.8rem);
+}
+
+.about-portrait-placeholder {
+  min-height: 420px;
+}
+
+.about-peek-owl {
+  width: 150px;
+
+  right: -25px;
+  bottom: -70px;
+}
+
+.service-grid,
+.skills-columns {
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  min-height: 260px;
+}
+
+.about-story,
+.skills-section,
+.experience-preview {
+  gap: 3rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
