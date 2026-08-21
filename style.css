@@ -1044,20 +1044,6 @@ a {
     2.5rem;
 }
 
-.project-shelf-header {
-  display: flex;
-
-  align-items: end;
-  justify-content: space-between;
-
-  gap: 2rem;
-
-  padding:
-    0
-    clamp(2rem, 6vw, 7rem)
-    2.5rem;
-}
-
 
 /* Controls */
 
@@ -1111,26 +1097,20 @@ a {
 
 .project-carousel {
   display: flex;
-
   gap: clamp(1.5rem, 2.5vw, 2.5rem);
 
   overflow-x: auto;
-
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-
   scrollbar-width: none;
 
   padding:
     .75rem
-    clamp(2rem, 6vw, 7rem)
+    var(--page-pad)
     2.5rem;
 
-  scroll-padding-left:
-    clamp(2rem, 6vw, 7rem);
-
-  scroll-padding-right:
-    clamp(2rem, 6vw, 7rem);
+  scroll-padding-left: var(--page-pad);
+  scroll-padding-right: var(--page-pad);
 }
 
 .project-carousel::-webkit-scrollbar {
@@ -2670,11 +2650,8 @@ a {
    }
 
    .project-carousel {
-     gap: 1rem;
-
      padding-left: 1.5rem;
      padding-right: 1.5rem;
-     padding-bottom: 2rem;
 
      scroll-padding-left: 1.5rem;
      scroll-padding-right: 1.5rem;
@@ -2686,8 +2663,6 @@ a {
    }
 
    .project-shelf-header {
-     align-items: start;
-
      padding-left: 1.5rem;
      padding-right: 1.5rem;
    }
