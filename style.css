@@ -2421,6 +2421,424 @@ a {
   font-size: .9rem;
 }
 
+/* ========================================
+   PROJECT CASE STUDIES
+======================================== */
+
+.case-hero {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(260px, .7fr);
+
+  align-items: end;
+
+  gap: clamp(3rem, 8vw, 9rem);
+
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad)
+    clamp(4rem, 7vw, 7rem);
+}
+
+.case-hero-copy {
+  max-width: 1050px;
+}
+
+.case-back-link {
+  display: inline-block;
+
+  margin-bottom: 3rem;
+
+  font-weight: 700;
+
+  text-underline-offset: .25rem;
+}
+
+.case-hero h1 {
+  margin: 0;
+
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size:
+    clamp(4.5rem, 9vw, 9rem);
+
+  font-weight: 400;
+
+  line-height: .85;
+
+  letter-spacing: -.05em;
+}
+
+.case-hero h1 em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+.case-intro {
+  max-width: 720px;
+
+  margin-top: 2rem;
+
+  font-size:
+    clamp(1.15rem, 2vw, 1.45rem);
+
+  font-weight: 500;
+}
+
+
+/* Meta information */
+
+.case-hero-meta {
+  border-top:
+    2px solid
+    var(--night-sky);
+}
+
+.case-meta-item {
+  display: grid;
+
+  grid-template-columns:
+    110px
+    1fr;
+
+  gap: 1rem;
+
+  padding:
+    1rem 0;
+
+  border-bottom:
+    1px solid
+    rgba(29,74,86,.2);
+}
+
+.case-meta-item span {
+  font-family:
+    "Bebas Neue",
+    sans-serif;
+
+  letter-spacing: .08em;
+}
+
+.case-meta-item p {
+  margin: 0;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   PROJECT IMAGES
+======================================== */
+
+.case-image-wide,
+.case-final-image {
+  padding:
+    0
+    var(--page-pad)
+    clamp(5rem, 8vw, 8rem);
+}
+
+.case-image-placeholder {
+  min-height:
+    clamp(350px, 55vw, 750px);
+
+  display: grid;
+  place-items: center;
+  align-content: center;
+
+  gap: .5rem;
+
+  padding: 2rem;
+
+  background:
+    var(--egg-shell);
+
+  border:
+    2px solid
+    var(--night-sky);
+
+  border-radius:
+    var(--radius);
+
+  text-align: center;
+}
+
+.case-image-placeholder span {
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size:
+    clamp(2rem, 4vw, 4rem);
+}
+
+.case-image-placeholder small {
+  font-weight: 600;
+
+  opacity: .65;
+}
+
+.case-image-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap:
+    clamp(1rem, 2vw, 2rem);
+
+  margin-top:
+    clamp(3rem, 6vw, 6rem);
+}
+
+.case-image-grid
+.case-image-placeholder {
+  min-height:
+    clamp(300px, 35vw, 520px);
+}
+
+
+/* ========================================
+   CASE STUDY SECTIONS
+======================================== */
+
+.case-section {
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, .75fr)
+    minmax(0, 1.25fr);
+
+  gap:
+    clamp(3rem, 8vw, 9rem);
+
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+}
+
+.case-section-heading {
+  max-width: 650px;
+}
+
+.case-section-heading h2 {
+  margin: 0;
+
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size:
+    clamp(3rem, 5vw, 5.5rem);
+
+  font-weight: 400;
+
+  line-height: .96;
+
+  letter-spacing: -.03em;
+}
+
+.case-section-heading h2 em {
+  display: block;
+
+  color: var(--sage);
+
+  font-weight: 400;
+}
+
+.case-section-copy {
+  max-width: 780px;
+
+  align-self: end;
+
+  font-size: 1.1rem;
+}
+
+.case-section-copy p {
+  margin-top: 0;
+
+  margin-bottom: 1.4rem;
+}
+
+.case-large-copy {
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size:
+    clamp(1.8rem, 3vw, 2.8rem);
+
+  line-height: 1.2;
+}
+
+
+/* Accent section */
+
+.case-accent {
+  background:
+    var(--sage);
+
+  color: white;
+}
+
+.case-accent
+.case-section-heading h2 em {
+  color: var(--egg-shell);
+}
+
+
+/* ========================================
+   DESIGN PROCESS
+======================================== */
+
+.case-process {
+  display: block;
+}
+
+.case-process
+.case-section-heading {
+  margin-bottom: 4rem;
+}
+
+.case-process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+.process-step {
+  position: relative;
+
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  padding: 1.5rem;
+
+  background:
+    var(--egg-shell);
+
+  border:
+    2px solid
+    var(--night-sky);
+
+  border-radius:
+    var(--radius);
+}
+
+.process-step > span {
+  position: absolute;
+
+  top: 1.2rem;
+  right: 1.2rem;
+
+  font-family:
+    "Bebas Neue",
+    sans-serif;
+
+  font-size: 1rem;
+
+  letter-spacing: .08em;
+}
+
+.process-step h3 {
+  margin:
+    0 0 .6rem;
+
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+}
+
+.process-step p {
+  margin: 0;
+}
+
+
+/* ========================================
+   FINAL RESULT / REFLECTION
+======================================== */
+
+.case-result {
+  background:
+    var(--egg-shell);
+}
+
+.case-reflection {
+  background:
+    var(--moonlight);
+}
+
+
+/* ========================================
+   NEXT PROJECT
+======================================== */
+
+.next-project {
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
+  background:
+    var(--sunset);
+}
+
+.next-project > a {
+  display: flex;
+
+  align-items: end;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  border-top:
+    2px solid
+    var(--night-sky);
+
+  padding-top: 2rem;
+}
+
+.next-project a span {
+  font-family:
+    "Bebas Neue",
+    sans-serif;
+
+  letter-spacing: .08em;
+}
+
+.next-project a strong {
+  font-family:
+    "DM Serif Display",
+    serif;
+
+  font-size:
+    clamp(2.5rem, 6vw, 6rem);
+
+  font-weight: 400;
+
+  text-align: right;
+}
+
 
 /* ========================================
    TABLET
@@ -2482,18 +2900,32 @@ a {
     grid-template-columns:
       1fr 1fr;
   }
-}
 
-.contact-hero {
-  grid-template-columns: 1fr;
-}
+   .contact-hero {
+     grid-template-columns: 1fr;
+   }
 
-.contact-card {
-  min-height: 420px;
-}
+   .contact-card {
+     min-height: 420px;
+   }
 
-.contact-detail-grid {
-  grid-template-columns: 1fr 1fr;
+   .contact-detail-grid {
+     grid-template-columns: 1fr 1fr;
+   }
+
+   .case-hero,
+   .case-section {
+     grid-template-columns: 1fr;
+   }
+
+   .case-hero-meta {
+     max-width: 650px;
+   }
+
+   .case-process-grid {
+     grid-template-columns:
+       1fr 1fr;
+   }
 }
 
 
@@ -2737,36 +3169,77 @@ a {
   .footer-bottom {
     flex-direction: column;
   }
-}
 
-.contact-hero {
+   .contact-hero {
+     padding-top: 4rem;
+   }
+
+   .contact-heading h1 {
+     font-size:
+       clamp(3.6rem, 15vw, 5.8rem);
+   }
+
+   .contact-card {
+     min-height: 380px;
+   }
+
+   .contact-primary {
+     font-size: 1.35rem;
+
+     word-break: break-word;
+   }
+
+   .contact-owl {
+     width: 140px;
+
+     right: -25px;
+     bottom: -70px;
+   }
+
+   .contact-detail-grid {
+     grid-template-columns: 1fr;
+   }
+
+   .case-hero {
   padding-top: 4rem;
 }
 
-.contact-heading h1 {
-  font-size:
-    clamp(3.6rem, 15vw, 5.8rem);
-}
+   .case-hero h1 {
+     font-size:
+       clamp(4rem, 18vw, 6.5rem);
+   }
 
-.contact-card {
-  min-height: 380px;
-}
+   .case-back-link {
+     margin-bottom: 2rem;
+   }
 
-.contact-primary {
-  font-size: 1.35rem;
+   .case-meta-item {
+     grid-template-columns:
+       90px
+       1fr;
+   }
 
-  word-break: break-word;
-}
+   .case-image-grid {
+     grid-template-columns: 1fr;
+   }
 
-.contact-owl {
-  width: 140px;
+   .case-process-grid {
+     grid-template-columns: 1fr;
+   }
 
-  right: -25px;
-  bottom: -70px;
-}
+   .process-step {
+     min-height: 230px;
+   }
 
-.contact-detail-grid {
-  grid-template-columns: 1fr;
+   .next-project > a {
+     flex-direction: column;
+
+     align-items: flex-start;
+   }
+
+   .next-project a strong {
+     text-align: left;
+   }
 }
 
 
