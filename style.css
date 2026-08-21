@@ -1046,17 +1046,18 @@ a {
     2.5rem;
 }
 
-.project-shelf-header h2 {
-  margin: 0;
+.project-shelf-header {
+  display: flex;
 
-  font-family: "DM Serif Display", serif;
+  align-items: end;
+  justify-content: space-between;
 
-  font-size:
-    clamp(2.6rem, 5vw, 4.8rem);
+  gap: 2rem;
 
-  font-weight: 400;
-
-  line-height: 1;
+  padding:
+    0
+    clamp(2rem, 6vw, 7rem)
+    2.5rem;
 }
 
 
@@ -1113,22 +1114,25 @@ a {
 .project-carousel {
   display: flex;
 
-  gap:
-    clamp(1rem, 2vw, 2rem);
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
 
   overflow-x: auto;
 
   scroll-behavior: smooth;
-
-  scroll-snap-type:
-    x mandatory;
+  scroll-snap-type: x mandatory;
 
   scrollbar-width: none;
 
   padding:
-    .5rem
-    var(--page-pad)
-    2rem;
+    .75rem
+    clamp(2rem, 6vw, 7rem)
+    2.5rem;
+
+  scroll-padding-left:
+    clamp(2rem, 6vw, 7rem);
+
+  scroll-padding-right:
+    clamp(2rem, 6vw, 7rem);
 }
 
 .project-carousel::-webkit-scrollbar {
@@ -2664,25 +2668,40 @@ a {
   }
 
    .carousel-controls {
-  display: none;
-}
+     display: none;
+   }
 
-.catalog-card {
-  flex-basis: 82vw;
-}
+   .project-carousel {
+     gap: 1rem;
 
-.project-shelf-header {
-  align-items: start;
-}
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+     padding-bottom: 2rem;
 
-.projects-hero {
-  padding-top: 4rem;
-}
+     scroll-padding-left: 1.5rem;
+     scroll-padding-right: 1.5rem;
+   }
 
-.projects-hero h1 {
-  font-size:
-    clamp(3.8rem, 16vw, 6rem);
-}
+   .catalog-card {
+     flex: 0 0 78vw;
+     max-width: 340px;
+   }
+
+   .project-shelf-header {
+     align-items: start;
+
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+   }
+
+   .projects-hero {
+     padding-top: 4rem;
+   }
+
+   .projects-hero h1 {
+     font-size:
+       clamp(3.8rem, 16vw, 6rem);
+   }
 
   .about-hero {
     min-height: auto;
