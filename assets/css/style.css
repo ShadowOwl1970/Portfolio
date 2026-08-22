@@ -3289,6 +3289,11 @@ a {
    .next-project a strong {
      text-align: left;
    }
+
+   .brand-color-grid {
+  grid-template-columns:
+    1fr 1fr;
+}
 }
 
 @media (max-width: 1100px) {
