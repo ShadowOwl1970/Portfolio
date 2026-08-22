@@ -1032,7 +1032,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.7fr);
   gap: clamp(3rem, 7vw, 8rem);
-  padding: clamp(7rem, 12vw, 11rem) var(--page-padding)
+  padding: clamp(7rem, 12vw, 11rem) var(--page-pad)
            clamp(4rem, 8vw, 7rem);
 }
 
@@ -1086,7 +1086,7 @@ a {
   grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
   gap: clamp(2.5rem, 6vw, 7rem);
   align-items: center;
-  padding: 0 var(--page-padding)
+  padding: 0 var(--page-pad)
            clamp(6rem, 10vw, 10rem);
 }
 
@@ -1132,7 +1132,7 @@ a {
   align-items: end;
   gap: 3rem;
   padding: clamp(5rem, 9vw, 9rem)
-           var(--page-padding)
+           var(--page-pad)
            clamp(2rem, 4vw, 4rem);
 }
 
@@ -1159,7 +1159,7 @@ a {
 .art-gallery {
   columns: 3;
   column-gap: clamp(1rem, 2vw, 2rem);
-  padding: 0 var(--page-padding)
+  padding: 0 var(--page-pad)
            clamp(6rem, 10vw, 10rem);
 }
 
@@ -1757,6 +1757,761 @@ a {
 
   .footer-bottom {
     flex-direction: column;
+  }
+
+}
+
+
+
+
+/* ========================================
+   WORK PAGE
+======================================== */
+
+.work-hero {
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad)
+    clamp(4rem, 7vw, 6rem);
+}
+
+.work-hero h1 {
+  max-width: 1000px;
+  margin: 0 0 1.75rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: .88;
+  letter-spacing: -.045em;
+}
+
+.work-hero h1 em {
+  display: block;
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.work-hero > p:last-child {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+}
+
+.project-shelf {
+  padding:
+    clamp(4rem, 7vw, 7rem)
+    var(--page-pad);
+  border-top: 1px solid var(--border);
+}
+
+.project-shelf:nth-of-type(even) {
+  background: var(--egg-shell);
+}
+
+.project-shelf-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.2rem;
+}
+
+.project-shelf-header h2 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.5rem, 4.5vw, 4.8rem);
+  font-weight: 400;
+  line-height: .95;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: .65rem;
+  flex-shrink: 0;
+}
+
+.carousel-button,
+.carousel-controls button {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 2px solid var(--night-sky);
+  border-radius: 50%;
+  background: var(--moonlight);
+  color: var(--night-sky);
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 800;
+  transition:
+    transform .18s ease,
+    background .18s ease,
+    color .18s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible,
+.carousel-controls button:hover,
+.carousel-controls button:focus-visible {
+  transform: translateY(-2px);
+  background: var(--night-sky);
+  color: white;
+}
+
+.project-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 31vw);
+  gap: clamp(1.2rem, 2vw, 2rem);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  padding: .4rem 0 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--night-sky) transparent;
+}
+
+.project-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-carousel::-webkit-scrollbar-thumb {
+  background: var(--night-sky);
+  border-radius: 999px;
+}
+
+.catalog-card {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.catalog-card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.catalog-image {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  align-items: end;
+  padding: 1.4rem;
+  overflow: hidden;
+  border: 2px solid var(--night-sky);
+  border-radius: 1.15rem;
+  background: var(--egg-shell);
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.catalog-card a:hover .catalog-image,
+.catalog-card a:focus-visible .catalog-image {
+  transform: translateY(-5px);
+  box-shadow: 7px 7px 0 var(--night-sky);
+}
+
+.catalog-placeholder {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: .95;
+}
+
+.catalog-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem .15rem 0;
+}
+
+.catalog-info > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.catalog-info p,
+.catalog-info h3 {
+  margin: 0;
+}
+
+.catalog-info p {
+  margin-bottom: .35rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+
+.catalog-info h3 {
+  font-size: 1.2rem;
+}
+
+.catalog-arrow {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--night-sky);
+  border-radius: 50%;
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    color .2s ease;
+}
+
+.catalog-card a:hover .catalog-arrow,
+.catalog-card a:focus-visible .catalog-arrow {
+  transform: translate(3px, -3px);
+  background: var(--night-sky);
+  color: white;
+}
+
+.character-card {
+  color: white;
+  background: linear-gradient(145deg, var(--night-sky), var(--sage));
+}
+
+
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+.about-page,
+.about-main {
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad);
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: center;
+}
+
+.about-intro h1 {
+  margin: 0 0 1.5rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: .88;
+}
+
+.about-intro h1 em {
+  display: block;
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.about-intro-copy {
+  max-width: 760px;
+}
+
+.about-intro-copy p {
+  font-size: 1.08rem;
+}
+
+.about-mascot,
+.about-art {
+  display: grid;
+  place-items: end center;
+}
+
+.about-mascot img,
+.about-art img {
+  width: min(420px, 100%);
+}
+
+
+/* ========================================
+   RESUME PAGE
+======================================== */
+
+.resume-page,
+.resume-main {
+  padding:
+    clamp(4.5rem, 8vw, 8rem)
+    var(--page-pad);
+}
+
+.resume-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: center;
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.resume-hero h1 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-weight: 400;
+  line-height: .9;
+}
+
+.resume-hero h1 em {
+  display: block;
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.resume-hero-copy p {
+  max-width: 620px;
+  font-size: 1.1rem;
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.3rem;
+  margin-top: 2rem;
+}
+
+.resume-section {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  border-top: 2px solid var(--night-sky);
+}
+
+.resume-section > h2 {
+  margin: 0 0 2.5rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-weight: 400;
+}
+
+.resume-item {
+  display: grid;
+  grid-template-columns: minmax(160px, .38fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 7rem);
+  padding: 2.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-date {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: .08em;
+}
+
+.resume-item-content {
+  min-width: 0;
+}
+
+.resume-item-content h3 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.resume-company {
+  margin: .4rem 0 1.2rem;
+  color: var(--sunset);
+  font-weight: 700;
+}
+
+.resume-item-content ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.resume-item-content li {
+  margin-bottom: .6rem;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.resume-card {
+  padding: 1.5rem;
+  border: 2px solid var(--night-sky);
+  border-radius: 1rem;
+  background: var(--egg-shell);
+}
+
+
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-page,
+.contact-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 7vw, 8rem);
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad);
+  align-items: stretch;
+}
+
+.contact-copy h1 {
+  margin: 0 0 1.5rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-weight: 400;
+  line-height: .9;
+}
+
+.contact-copy h1 em {
+  display: block;
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.contact-copy p {
+  max-width: 650px;
+  font-size: 1.1rem;
+}
+
+.contact-card {
+  min-width: 0;
+  padding: clamp(2rem, 4vw, 4rem);
+  border: 2px solid var(--night-sky);
+  border-radius: 1.25rem;
+  background: var(--egg-shell);
+  box-shadow: 10px 10px 0 var(--night-sky);
+}
+
+.contact-card h2,
+.contact-card .contact-email {
+  margin: 0 0 1.5rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 400;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-links {
+  display: grid;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   CASE STUDY PAGES
+======================================== */
+
+.case-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+  gap: clamp(3rem, 7vw, 8rem);
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad)
+    clamp(4rem, 7vw, 7rem);
+  align-items: end;
+}
+
+.case-hero-copy {
+  max-width: 900px;
+}
+
+.case-back-link {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+  text-underline-offset: .25rem;
+}
+
+.case-hero h1 {
+  margin: 0 0 1.5rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: .86;
+  letter-spacing: -.045em;
+}
+
+.case-hero h1 em {
+  display: block;
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.case-intro {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(1.1rem, 1.9vw, 1.35rem);
+  font-weight: 500;
+}
+
+.case-hero-meta {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.case-meta-item {
+  padding-top: .9rem;
+  border-top: 1px solid var(--night-sky);
+}
+
+.case-meta-item span {
+  display: block;
+  margin-bottom: .3rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: .9rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.case-meta-item p {
+  margin: 0;
+}
+
+.case-image-wide,
+.case-final-image {
+  padding:
+    0
+    var(--page-pad)
+    clamp(5rem, 8vw, 8rem);
+}
+
+.case-image-placeholder {
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: .35rem;
+  padding: 2rem;
+  border: 2px solid var(--night-sky);
+  border-radius: 1.15rem;
+  background: var(--egg-shell);
+  text-align: center;
+}
+
+.case-image-placeholder span {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.case-image-placeholder small {
+  opacity: .75;
+}
+
+.case-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.case-section {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(3rem, 8vw, 9rem);
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad);
+}
+
+.case-accent {
+  background: var(--egg-shell);
+}
+
+.case-section-heading h2 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.8rem, 5.5vw, 5.7rem);
+  font-weight: 400;
+  line-height: .94;
+}
+
+.case-section-heading h2 em {
+  display: block;
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.case-section-copy {
+  align-self: center;
+  max-width: 760px;
+}
+
+.case-section-copy p {
+  margin-top: 0;
+}
+
+.case-large-copy {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+.case-process {
+  display: block;
+}
+
+.case-process .case-section-heading {
+  max-width: 950px;
+  margin-bottom: 3rem;
+}
+
+.case-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.case-process-grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.process-step {
+  padding: 1.6rem;
+  border: 2px solid var(--night-sky);
+  border-radius: 1rem;
+  background: var(--moonlight);
+}
+
+.process-step > span {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: .95rem;
+  letter-spacing: .08em;
+}
+
+.process-step h3 {
+  margin: 1.5rem 0 .65rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.process-step p {
+  margin: 0;
+}
+
+.case-result {
+  background: var(--sage);
+  color: white;
+}
+
+.case-result .case-section-heading h2 em {
+  color: var(--egg-shell);
+}
+
+.case-reflection {
+  background: var(--egg-shell);
+}
+
+.next-project {
+  padding:
+    clamp(5rem, 9vw, 9rem)
+    var(--page-pad);
+  border-top: 1px solid var(--border);
+}
+
+.next-project > a {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  text-decoration: none;
+}
+
+.next-project a span {
+  font-weight: 700;
+}
+
+.next-project a strong {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 400;
+  text-align: right;
+}
+
+
+/* ========================================
+   RESPONSIVE — OTHER PAGES
+======================================== */
+
+@media (max-width: 980px) {
+
+  .project-carousel {
+    grid-auto-columns: minmax(280px, 46vw);
+  }
+
+  .about-intro,
+  .resume-hero,
+  .case-hero,
+  .case-section {
+    grid-template-columns: 1fr;
+  }
+
+  .case-process-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 720px) {
+
+  .work-hero {
+    padding-top: 3.5rem;
+  }
+
+  .project-shelf-header {
+    align-items: center;
+  }
+
+  .project-carousel {
+    grid-auto-columns: minmax(265px, 86vw);
+  }
+
+  .about-intro,
+  .resume-hero,
+  .contact-page,
+  .contact-main,
+  .case-image-grid,
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .case-process-grid,
+  .case-process-grid-four {
+    grid-template-columns: 1fr;
+  }
+
+  .next-project > a {
+    display: block;
+  }
+
+  .next-project a strong {
+    display: block;
+    margin-top: .5rem;
+    text-align: left;
   }
 
 }
