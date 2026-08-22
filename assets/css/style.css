@@ -942,6 +942,88 @@ a {
   color: white;
 }
 
+.fantasy-rpg-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--night-sky),
+      var(--sage)
+    );
+
+  color: white;
+}
+
+.other-side-character-card {
+  background:
+    linear-gradient(
+      145deg,
+      #3B3FAE,
+      var(--sunset)
+    );
+
+  color: white;
+}
+
+.valorant-card {
+  background:
+    linear-gradient(
+      145deg,
+      #FF4655,
+      #1F2326
+    );
+
+  color: white;
+}
+
+.environments-card {
+  background:
+    linear-gradient(
+      145deg,
+      #8FC5D8,
+      var(--egg-shell)
+    );
+}
+
+.narrative-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--sage),
+      var(--night-sky)
+    );
+
+  color: white;
+}
+
+.other-side-illustration-card {
+  background:
+    linear-gradient(
+      145deg,
+      #D4B06A,
+      #5A3A30
+    );
+
+  color: white;
+}
+
+.creatures-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--sunset),
+      var(--egg-shell)
+    );
+}
+
+.portraits-card {
+  background:
+    linear-gradient(
+      145deg,
+      #E8C8BC,
+      var(--moonlight)
+    );
+}
+
 
 /* ========================================
    VIEW ALL PROJECTS
