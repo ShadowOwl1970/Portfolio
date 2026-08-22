@@ -2897,6 +2897,17 @@ a {
   opacity: .8;
 }
 
+.view-all-projects {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 3rem;
+}
+
+.view-all-projects .button {
+  font-size: 1rem;
+}
+
 
 /* ========================================
    TABLET
