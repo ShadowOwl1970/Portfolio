@@ -1421,22 +1421,10 @@ a {
 
   scroll-snap-type: inline mandatory;
   overscroll-behavior-inline: contain;
-
-  scrollbar-width: thin;
-  scrollbar-color: var(--night-sky) transparent;
 }
 
 .project-carousel::-webkit-scrollbar {
-  height: 8px;
-}
-
-.project-carousel::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.project-carousel::-webkit-scrollbar-thumb {
-  background: var(--night-sky);
-  border-radius: 999px;
+  display: none;
 }
 
 .catalog-card {
@@ -1715,13 +1703,24 @@ a {
 }
 
 .about-peek-owl {
-  position: absolute;
+   position: absolute;
 
-  width: min(320px, 72%);
-  right: -1rem;
-  bottom: -1rem;
+   width: 190px;
+   
+   right: -25px;
+   bottom: -85px;
+   
+   transform: rotate(-7deg);
+   
+   transition:
+      transform .25s ease;
+}
 
-  animation: owlFloat 5s ease-in-out infinite;
+.about-portrait-placeholder:hover
+.about-peek-owl {
+  transform:
+    translateY(-18px)
+    rotate(-4deg);
 }
 
 .about-story,
@@ -1741,7 +1740,9 @@ a {
 
   gap: clamp(3rem, 8vw, 8rem);
 
-  background: var(--egg-shell);
+  background: var(--sage);
+
+   color: white;
 }
 
 .story-heading h2,
@@ -1804,6 +1805,14 @@ a {
   background: var(--egg-shell);
 }
 
+.service-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    8px 8px 0
+    var(--night-sky);
+}
+
 .service-number {
   position: absolute;
   top: 1rem;
@@ -1834,7 +1843,7 @@ a {
 
   gap: clamp(3rem, 8vw, 8rem);
 
-  background: var(--night-sky);
+  background: var(--egg-shell);
   color: white;
 }
 
@@ -1880,7 +1889,7 @@ a {
 }
 
 .about-cta {
-  background: var(--egg-shell);
+  background: var(--sunset);
 }
 
 .about-cta > p:not(.eyebrow) {
@@ -1904,26 +1913,13 @@ a {
 
 .resume-hero {
   padding:
-    clamp(4.5rem, 8vw, 7rem)
+    clamp(4.5rem, 7vw, 7rem)
     var(--page-pad)
-    clamp(4rem, 7vw, 6rem);
-
-  border-bottom: 2px solid var(--night-sky);
+    clamp(4rem, 6vw, 6rem);
 }
 
 .resume-hero-inner {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1.2fr)
-    minmax(320px, .8fr);
-
-  gap: clamp(3rem, 7vw, 8rem);
-  align-items: end;
-}
-
-.resume-hero-inner > .eyebrow {
-  grid-column: 1 / -1;
-  margin-bottom: -1rem;
+  max-width: 1200px;
 }
 
 .resume-hero h1 {
@@ -1962,38 +1958,43 @@ a {
 
 .resume-section {
   padding:
-    clamp(5rem, 8vw, 8rem)
+    clamp(6rem, 10vw, 10rem)
     var(--page-pad);
+   background: var(--egg-shell);
 }
 
 .resume-section-heading {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
-.resume-section-heading h2 {
+.resume-section-heading h2,
+.resume-education h2,
+.resume-skills h2,
+.resume-cta h2 {
   margin: 0;
 
   font-family: "DM Serif Display", serif;
-  font-size: clamp(3rem, 5vw, 5rem);
+
   font-weight: 400;
-  line-height: .95;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: .98;
 }
 
 .resume-list {
+  max-width: 1100px;
+
   border-top: 2px solid var(--night-sky);
 }
 
 .resume-item {
-  display: grid;
-  grid-template-columns:
-    minmax(170px, .35fr)
-    minmax(0, 1fr);
+  display: block;
 
-  gap: clamp(2rem, 6vw, 7rem);
+  padding: 3rem 0;
 
-  padding: clamp(2.5rem, 4vw, 4rem) 0;
-
-  border-bottom: 1px solid var(--border);
+  border-bottom:
+    1px solid rgba(29, 74, 86, .25);
 }
 
 .resume-item-meta span {
@@ -2015,7 +2016,7 @@ a {
 }
 
 .resume-company {
-  margin: .4rem 0 1.2rem;
+  margin: .2rem 0 1.2rem;
 
   color: var(--sunset);
   font-weight: 700;
@@ -2027,89 +2028,109 @@ a {
 }
 
 .resume-item-content li {
-  margin-bottom: .65rem;
+  margin-bottom: .7rem;
 }
 
 .resume-education {
   display: grid;
-  grid-template-columns:
-    minmax(0, .9fr)
-    minmax(320px, 1.1fr);
 
-  gap: clamp(3rem, 7vw, 8rem);
+  grid-template-columns:
+    1fr 1fr;
+
+  align-items: center;
+
+  gap: clamp(4rem, 8vw, 9rem);
 
   padding:
-    clamp(5rem, 8vw, 8rem)
+    clamp(6rem, 10vw, 10rem)
     var(--page-pad);
 
-  background: var(--egg-shell);
-}
+  background: var(--sage);
 
-.resume-education h2 {
-  margin: 0;
-
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 400;
-  line-height: .95;
+  color: white;
 }
 
 .resume-education h2 em {
   display: block;
-  color: var(--sage);
+
   font-weight: 400;
 }
 
 .education-card {
-  align-self: center;
-
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-
-  border: 2px solid var(--night-sky);
-  border-radius: 1rem;
+  padding: clamp(2rem, 4vw, 3rem);
 
   background: var(--moonlight);
-  box-shadow: var(--shadow);
-}
 
-.education-card p,
-.education-card h3 {
-  margin-top: 0;
+  color: var(--night-sky);
+
+  border: 2px solid var(--night-sky);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    10px 10px 0
+    var(--night-sky);
 }
 
 .education-school {
+  margin: 0 0 .5rem;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  letter-spacing: .08em;
+
   color: var(--sunset);
-  font-weight: 700;
 }
 
 .education-card h3 {
-  margin-bottom: .5rem;
+  margin: 0;
 
   font-family: "DM Serif Display", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
   font-weight: 400;
+}
+
+.education-card p {
+  margin: .8rem 0;
 }
 
 .resume-skills {
   padding:
-    clamp(5rem, 8vw, 8rem)
+    clamp(6rem, 10vw, 10rem)
     var(--page-pad);
 }
 
 .resume-skill-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 1.25rem;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: clamp(1.5rem, 3vw, 3rem);
 }
 
 .resume-skill-grid article {
-  padding: 1.5rem;
+  padding: 2rem;
+
+  background: var(--moonlight);
 
   border: 2px solid var(--night-sky);
-  border-radius: 1rem;
 
-  background: var(--egg-shell);
+  border-radius: var(--radius);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.resume-skill-grid article:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    7px 7px 0
+    var(--night-sky);
 }
 
 .resume-skill-grid h3 {
@@ -2121,33 +2142,43 @@ a {
 }
 
 .resume-skill-grid ul {
-  margin-bottom: 0;
-  padding-left: 1.2rem;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+.resume-skill-grid li {
+  padding: .5rem 0;
+
+  border-bottom:
+    1px solid
+    rgba(29,74,86,.15);
 }
 
 .resume-cta {
   padding:
-    clamp(5rem, 8vw, 8rem)
+    clamp(6rem, 10vw, 10rem)
     var(--page-pad);
 
-  background: var(--sage);
-  color: white;
+  background: var(--sunset);
+
+  text-align: center;
 }
 
 .resume-cta h2 {
-  max-width: 900px;
-  margin: 0;
+  max-width: 850px;
 
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(3rem, 5.5vw, 5.6rem);
-  font-weight: 400;
-  line-height: .95;
+  margin-inline: auto;
 }
 
 .resume-cta h2 em {
-  font-weight: 400;
+   display: block
+   font-weight: 400;
 }
 
+.resume-cta .resume-actions {
+  justify-content: center;
+}
 
 /* ========================================
    CASE STUDY PAGES
@@ -2528,10 +2559,13 @@ a {
 }
 
 .contact-lead {
-  max-width: 760px;
-  margin: 0;
+  max-width: 680px;
 
-  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  margin-top: 2rem;
+
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+
+  font-weight: 500;
 }
 
 .contact-card {
@@ -2644,16 +2678,24 @@ a {
 }
 
 .contact-owl {
-  position: absolute;
+   position: absolute;
 
-  right: -3rem;
-  bottom: -4rem;
+  width: 180px;
 
-  width: min(260px, 52%);
+  right: -35px;
+  bottom: -90px;
 
-  opacity: .16;
+  opacity: .95;
 
-  pointer-events: none;
+  transform: rotate(-7deg);
+
+  transition: transform .25s ease;
+}
+
+.contact-card:hover .contact-owl {
+  transform:
+    translateY(-18px)
+    rotate(-4deg);
 }
 
 .contact-details {
@@ -2668,7 +2710,7 @@ a {
     clamp(5rem, 9vw, 9rem)
     var(--page-pad);
 
-  background: var(--night-sky);
+  background: var(--sage);
   color: white;
 }
 
@@ -2697,10 +2739,19 @@ a {
 }
 
 .contact-detail-grid article {
-  padding: 1.4rem;
+  padding: 2rem;
 
-  border: 1px solid rgba(255,255,255,.3);
-  border-radius: 1rem;
+  background: var(--moonlight);
+
+  color: var(--night-sky);
+
+  border: 2px solid var(--night-sky);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    6px 6px 0
+    var(--night-sky);
 }
 
 .contact-detail-grid h3 {
@@ -2721,16 +2772,17 @@ a {
     clamp(5rem, 9vw, 9rem)
     var(--page-pad);
 
-  background: var(--egg-shell);
+  background: var(--sunset);
+   text-align: center;
 }
 
 .contact-cta h2 {
-  max-width: 900px;
+   max-width: 900px;
+   margin-inline: auto;
 }
 
 .contact-cta h2 em {
-  color: var(--sage);
-  font-weight: 400;
+  display: block;
 }
 
 .contact-actions {
@@ -2778,460 +2830,6 @@ a {
   .contact-actions {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-}
-
-/* =========================================================
-   RESTORED BRAND COLOR TREATMENTS
-   Keeps the current layouts intact and returns the softer,
-   more varied palette used across the original portfolio.
-========================================================= */
-
-/* Projects page */
-.projects-hero {
-  background: var(--moonlight);
-}
-
-.project-shelf {
-  background: var(--moonlight);
-}
-
-.project-shelf:nth-of-type(even) {
-  background: var(--egg-shell);
-}
-
-.hearth-card {
-  color: var(--night-sky);
-  background:
-    radial-gradient(
-      circle at 22% 28%,
-      rgba(254, 95, 85, .34),
-      transparent 26%
-    ),
-    radial-gradient(
-      circle at 76% 68%,
-      rgba(44, 166, 164, .34),
-      transparent 30%
-    ),
-    var(--white);
-}
-
-.rivers-card {
-  color: var(--night-sky);
-  background:
-    radial-gradient(
-      circle at 72% 20%,
-      rgba(238, 245, 219, .46),
-      transparent 28%
-    ),
-    var(--sunset);
-}
-
-.phoenix-card {
-  color: var(--night-sky);
-  background:
-    linear-gradient(
-      145deg,
-      #F6CF6E,
-      var(--sunset)
-    );
-}
-
-.alter-catalog-card {
-  color: white;
-  background:
-    radial-gradient(
-      circle at 25% 22%,
-      rgba(255, 255, 255, .14),
-      transparent 28%
-    ),
-    linear-gradient(
-      145deg,
-      #3B3FAE,
-      var(--night-sky)
-    );
-}
-
-.suklaa-catalog-card {
-  color: #F6CF6E;
-  background:
-    radial-gradient(
-      circle at 70% 28%,
-      rgba(246, 207, 110, .16),
-      transparent 30%
-    ),
-    #1E2332;
-}
-
-.podtopia-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      var(--sage),
-      var(--night-sky)
-    );
-}
-
-.quest-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      #6B4CBF,
-      #2F2947
-    );
-}
-
-.bakery-card {
-  color: var(--night-sky);
-  background:
-    linear-gradient(
-      145deg,
-      #F2C7BA,
-      #F6CF6E
-    );
-}
-
-.character-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      var(--night-sky),
-      var(--sage)
-    );
-}
-
-.fantasy-rpg-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      #3B3FAE,
-      var(--night-sky)
-    );
-}
-
-.other-side-character-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      #3B3FAE,
-      var(--sunset)
-    );
-}
-
-.valorant-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      #FF4655,
-      #1F2326
-    );
-}
-
-.illustration-card,
-.environments-card {
-  color: var(--night-sky);
-  background:
-    linear-gradient(
-      145deg,
-      #A9D8E6,
-      var(--egg-shell)
-    );
-}
-
-.narrative-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      var(--sage),
-      var(--night-sky)
-    );
-}
-
-.other-side-illustration-card {
-  color: white;
-  background:
-    linear-gradient(
-      145deg,
-      #D4B06A,
-      #5A3A30
-    );
-}
-
-.creatures-card {
-  color: var(--night-sky);
-  background:
-    linear-gradient(
-      145deg,
-      var(--sunset),
-      var(--egg-shell)
-    );
-}
-
-.portraits-card {
-  color: var(--night-sky);
-  background:
-    linear-gradient(
-      145deg,
-      #E8C8BC,
-      var(--moonlight)
-    );
-}
-
-
-/* About page */
-.about-hero {
-  background: var(--moonlight);
-}
-
-.about-portrait-placeholder {
-  background: var(--egg-shell);
-}
-
-.about-story {
-  background: var(--egg-shell);
-}
-
-.about-services {
-  background: var(--moonlight);
-}
-
-.service-card:nth-child(1) {
-  background: var(--egg-shell);
-}
-
-.service-card:nth-child(2) {
-  background: rgba(44, 166, 164, .14);
-}
-
-.service-card:nth-child(3) {
-  background: rgba(254, 95, 85, .12);
-}
-
-.service-card:nth-child(4) {
-  background: rgba(238, 245, 219, .78);
-}
-
-.skills-section {
-  background: var(--sage);
-  color: white;
-}
-
-.skill-group {
-  background: rgba(255, 255, 255, .08);
-  border-color: rgba(255, 255, 255, .38);
-}
-
-.experience-preview {
-  background: var(--moonlight);
-}
-
-.about-cta {
-  background: var(--egg-shell);
-}
-
-
-/* Restore the owl as a small peek rather than a full mascot */
-.about-portrait-placeholder {
-  overflow: hidden;
-}
-
-.about-peek-owl {
-  position: absolute;
-
-  right: 1.25rem;
-  bottom: -145px;
-
-  width: min(245px, 52%);
-
-  z-index: 2;
-
-  animation: owlFloat 5s ease-in-out infinite;
-}
-
-.about-portrait-placeholder > div {
-  position: relative;
-  z-index: 1;
-}
-
-
-/* Résumé */
-.resume-hero {
-  background: var(--moonlight);
-}
-
-.resume-section {
-  background: var(--moonlight);
-}
-
-.resume-education {
-  background: var(--egg-shell);
-}
-
-.education-card {
-  background: var(--moonlight);
-}
-
-.resume-skills {
-  background: var(--moonlight);
-}
-
-.resume-skill-grid article:nth-child(1) {
-  background: var(--egg-shell);
-}
-
-.resume-skill-grid article:nth-child(2) {
-  background: rgba(44, 166, 164, .12);
-}
-
-.resume-skill-grid article:nth-child(3) {
-  background: rgba(254, 95, 85, .10);
-}
-
-.resume-cta {
-  background: var(--sage);
-  color: white;
-}
-
-
-/* Contact */
-.contact-hero {
-  background: var(--moonlight);
-}
-
-.contact-card {
-  background: var(--egg-shell);
-}
-
-.contact-details {
-  background: var(--sage);
-  color: white;
-}
-
-.contact-detail-grid article {
-  background: rgba(255, 255, 255, .08);
-  border-color: rgba(255, 255, 255, .38);
-}
-
-.contact-cta {
-  background: var(--egg-shell);
-}
-
-
-/* Case studies */
-.case-hero {
-  background: var(--moonlight);
-}
-
-.case-accent {
-  background: var(--egg-shell);
-}
-
-.case-result {
-  background: var(--sage);
-  color: white;
-}
-
-.case-reflection {
-  background: var(--egg-shell);
-}
-
-
-/* Mobile owl peek */
-@media (max-width: 720px) {
-
-  .about-peek-owl {
-    right: .75rem;
-    bottom: -120px;
-
-    width: min(210px, 58%);
-  }
-
-}
-
-/* =========================================================
-   OWL PEEK FIX — ABOUT + CONTACT
-   Keeps both mascots partially hidden so they peek into the layout.
-========================================================= */
-
-/* ABOUT PAGE OWL */
-.about-portrait-placeholder {
-  position: relative;
-  overflow: hidden;
-}
-
-.about-peek-owl {
-  position: absolute;
-
-  right: 1rem;
-  bottom: -118px;
-
-  width: min(230px, 50%);
-
-  z-index: 3;
-
-  opacity: 1;
-
-  pointer-events: none;
-
-  animation: owlFloat 5s ease-in-out infinite;
-}
-
-
-/* CONTACT PAGE OWL */
-.contact-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-owl {
-  position: absolute;
-
-  right: .9rem;
-  bottom: -120px;
-
-  width: min(235px, 48%);
-
-  z-index: 1;
-
-  opacity: 1;
-
-  pointer-events: none;
-
-  animation: owlFloat 5s ease-in-out infinite;
-}
-
-/* Keep contact content above the peeking owl */
-.contact-card-label,
-.contact-primary,
-.contact-links {
-  position: relative;
-  z-index: 2;
-}
-
-
-/* MOBILE */
-@media (max-width: 720px) {
-
-  .about-peek-owl {
-    right: .5rem;
-    bottom: -98px;
-
-    width: min(195px, 54%);
-  }
-
-  .contact-owl {
-    right: .4rem;
-    bottom: -100px;
-
-    width: min(200px, 52%);
   }
 
 }
