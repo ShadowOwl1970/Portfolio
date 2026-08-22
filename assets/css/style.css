@@ -2899,13 +2899,22 @@ a {
 
 .view-all-projects {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 
-  margin-top: 3rem;
+  width: 100%;
+
+  margin-top: 4.5rem;
+  padding-bottom: 1rem;
 }
 
 .view-all-projects .button {
-  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  min-width: 190px;
 }
 
 
@@ -3321,6 +3330,18 @@ a {
    .brand-color-grid {
   grid-template-columns:
     1fr 1fr;
+}
+
+   .view-all-projects {
+  justify-content: center;
+
+  margin-top: 3rem;
+  padding-inline: 1.5rem;
+}
+
+.view-all-projects .button {
+  width: 100%;
+  max-width: 320px;
 }
 }
 
