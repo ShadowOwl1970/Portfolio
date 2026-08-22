@@ -1610,10 +1610,12 @@ a {
 
 .projects-cta {
   padding:
-    clamp(5rem, 9vw, 9rem)
+    clamp(6rem, 10vw, 10rem)
     var(--page-pad);
 
-  border-top: 1px solid var(--border);
+  background: var(--sunset);
+
+  text-align: center;
 }
 
 .projects-cta h2 {
@@ -1626,7 +1628,7 @@ a {
 }
 
 .projects-cta h2 em {
-  color: var(--sage);
+  display: block;
   font-weight: 400;
 }
 
@@ -1643,27 +1645,38 @@ a {
 .about-hero {
   position: relative;
 
+  min-height: 760px;
+
   display: grid;
+
   grid-template-columns:
-    minmax(0, 1.1fr)
-    minmax(320px, .9fr);
+    1.05fr .95fr;
+
+  align-items: center;
 
   gap: clamp(3rem, 7vw, 8rem);
-  align-items: center;
 
   padding:
     clamp(5rem, 9vw, 9rem)
     var(--page-pad);
 }
 
+.about-hero-copy {
+  max-width: 900px;
+}
+
 .about-hero-copy h1 {
-  margin: 0 0 1.5rem;
+  margin: 0;
 
   font-family: "DM Serif Display", serif;
-  font-size: clamp(4rem, 7vw, 7rem);
+
   font-weight: 400;
-  line-height: .9;
-  letter-spacing: -.035em;
+
+  font-size: clamp(4rem, 7vw, 7.5rem);
+
+  line-height: .94;
+
+  letter-spacing: -.04em;
 }
 
 .about-hero-copy h1 em {
@@ -1673,10 +1686,15 @@ a {
 }
 
 .about-lead {
-  max-width: 780px;
-  margin: 0;
+   max-width: 680px;
 
-  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  margin-top: 2rem;
+
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+
+  font-weight: 500;
+
+  line-height: 1.7;
 }
 
 .about-portrait-placeholder {
@@ -1765,7 +1783,6 @@ a {
 .skills-section h2 em,
 .experience-preview h2 em,
 .about-cta h2 em {
-  color: var(--sage);
   font-weight: 400;
 }
 
@@ -1793,20 +1810,25 @@ a {
 }
 
 .service-card {
-  position: relative;
+ position: relative;
 
-  min-height: 300px;
+  min-height: 330px;
 
   display: flex;
   flex-direction: column;
   justify-content: end;
 
-  padding: 1.5rem;
-
-  border: 2px solid var(--night-sky);
-  border-radius: 1rem;
+  padding: 1.7rem;
 
   background: var(--egg-shell);
+
+  border: 2px solid var(--night-sky);
+
+  border-radius: var(--radius);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 }
 
 .service-card:hover {
@@ -1848,7 +1870,6 @@ a {
   gap: clamp(3rem, 8vw, 8rem);
 
   background: var(--egg-shell);
-  color: white;
 }
 
 .skills-columns {
@@ -1893,7 +1914,13 @@ a {
 }
 
 .about-cta {
+  padding:
+    clamp(6rem, 10vw, 10rem)
+    var(--page-pad);
+
   background: var(--sunset);
+
+  text-align: center;
 }
 
 .about-cta > p:not(.eyebrow) {
@@ -1903,11 +1930,13 @@ a {
 
 .about-cta-actions {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
-  gap: 1.25rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+
+  margin-top: 2.5rem;
 }
 
 
@@ -1930,33 +1959,41 @@ a {
   margin: 0;
 
   font-family: "DM Serif Display", serif;
-  font-size: clamp(4rem, 7vw, 7rem);
+
   font-weight: 400;
-  line-height: .9;
-  letter-spacing: -.035em;
+
+  font-size: clamp(4rem, 6.5vw, 7rem);
+
+  line-height: .92;
+
+  letter-spacing: -.04em;
 }
 
 .resume-hero h1 em {
   color: var(--sage);
+
   font-weight: 400;
 }
 
 .resume-hero-copy {
-  align-self: end;
+  max-width: 700px;
+
+  margin-top: 2rem;
+
+  font-size: 1.2rem;
 }
 
 .resume-hero-copy p {
-  max-width: 620px;
-  margin-top: 0;
-  font-size: 1.1rem;
+  margin: 0;
 }
 
 .resume-actions {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 
-  gap: 1.25rem;
+  gap: 1.5rem;
+
   margin-top: 2rem;
 }
 
@@ -1964,7 +2001,8 @@ a {
   padding:
     clamp(6rem, 10vw, 10rem)
     var(--page-pad);
-   background: var(--egg-shell);
+
+  background: var(--egg-shell);
 }
 
 .resume-section-heading {
@@ -2001,33 +2039,41 @@ a {
     1px solid rgba(29, 74, 86, .25);
 }
 
-.resume-item-meta span {
+.resume-item-meta {
+  margin-bottom: .75rem;
+
   font-family: "Bebas Neue", sans-serif;
-  letter-spacing: .08em;
+  font-size: 1rem;
+  letter-spacing: .07em;
 }
 
 .resume-item-content {
-  min-width: 0;
+  max-width: 900px;
+  margin: 0;
 }
 
 .resume-item-content h3 {
   margin: 0;
 
   font-family: "DM Serif Display", serif;
+
   font-size: clamp(2rem, 3vw, 3rem);
+
   font-weight: 400;
-  line-height: 1;
 }
 
 .resume-company {
-  margin: .2rem 0 1.2rem;
+  margin:
+    .2rem 0 1.2rem;
 
   color: var(--sunset);
+
   font-weight: 700;
 }
 
 .resume-item-content ul {
   margin: 0;
+
   padding-left: 1.2rem;
 }
 
@@ -2100,6 +2146,10 @@ a {
   margin: .8rem 0;
 }
 
+.education-card span {
+  font-weight: 700;
+}
+
 .resume-skills {
   padding:
     clamp(6rem, 10vw, 10rem)
@@ -2141,14 +2191,17 @@ a {
   margin-top: 0;
 
   font-family: "DM Serif Display", serif;
+
   font-size: 1.8rem;
+
   font-weight: 400;
 }
 
 .resume-skill-grid ul {
-   margin: 0;
-   padding: 0;
-   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .resume-skill-grid li {
@@ -2176,8 +2229,9 @@ a {
 }
 
 .resume-cta h2 em {
-   display: block
-   font-weight: 400;
+  display: block;
+
+  font-weight: 400;
 }
 
 .resume-cta .resume-actions {
@@ -2698,7 +2752,7 @@ a {
 
 .contact-card:hover .contact-owl {
   transform:
-    translateY(-18px)
+    translateY(-15px)
     rotate(-4deg);
 }
 
@@ -2773,16 +2827,18 @@ a {
 
 .contact-cta {
   padding:
-    clamp(5rem, 9vw, 9rem)
+    clamp(6rem, 10vw, 10rem)
     var(--page-pad);
 
   background: var(--sunset);
-   text-align: center;
+
+  text-align: center;
 }
 
 .contact-cta h2 {
-   max-width: 900px;
-   margin-inline: auto;
+  max-width: 850px;
+
+  margin-inline: auto;
 }
 
 .contact-cta h2 em {
@@ -2791,13 +2847,14 @@ a {
 
 .contact-actions {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 
-  gap: 1.3rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+
+  margin-top: 2.5rem;
 }
-
 
 /* ========================================
    RESPONSIVE — CONTACT
