@@ -1410,7 +1410,9 @@ a {
 .project-carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(300px, 31vw);
+
+  /* Same card sizing in every carousel */
+  grid-auto-columns: clamp(300px, 24vw, 390px);
 
   gap: clamp(1.25rem, 2vw, 2rem);
 
@@ -1442,7 +1444,8 @@ a {
   position: relative;
 
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 350px;
+  min-height: 0;
 
   display: flex;
   align-items: end;
@@ -1459,17 +1462,6 @@ a {
   transition:
     transform .2s ease,
     box-shadow .2s ease;
-}
-
-.catalog-image img {
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
 }
 
 .catalog-card a:hover .catalog-image,
@@ -1500,12 +1492,6 @@ a {
   letter-spacing: .07em;
 
   box-shadow: 3px 3px 0 var(--night-sky);
-}
-
-.catalog-placeholder,
-.catalog-label {
-  position: relative;
-  z-index: 2;
 }
 
 .catalog-info {
