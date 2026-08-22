@@ -2721,6 +2721,15 @@ a {
   gap: 1.25rem;
 }
 
+.case-process-grid-four {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
 .process-step {
   position: relative;
 
@@ -2975,6 +2984,10 @@ a {
      grid-template-columns:
        1fr 1fr;
    }
+   .case-process-grid-four {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
 }
 
 
@@ -3273,6 +3286,10 @@ a {
    }
 
    .case-process-grid {
+     grid-template-columns: 1fr;
+   }
+
+   .case-process-grid-four {
      grid-template-columns: 1fr;
    }
 
