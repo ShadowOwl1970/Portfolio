@@ -143,6 +143,7 @@
 /* ---------- Feature / showcase sections ---------- */
 
 .case-showcase {
+  display: block;
   padding: clamp(5rem, 8vw, 8rem) var(--page-pad);
 }
 
@@ -169,6 +170,14 @@
   margin: 0;
   font-size: clamp(1rem, 1.15vw, 1.25rem);
   line-height: 1.65;
+}
+
+
+.case-showcase > .case-screen-grid,
+.case-showcase > .case-process-grid,
+.case-showcase > .case-process-grid-four,
+.case-showcase > .case-brand-grid {
+  margin-top: clamp(2.5rem, 5vw, 5rem);
 }
 
 /* ---------- Media ---------- */
@@ -266,7 +275,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .85rem;
+  justify-content: flex-start;
+  gap: .9rem;
   margin: 0;
 }
 
@@ -276,6 +286,18 @@
   max-height: 680px;
   object-fit: contain;
   filter: drop-shadow(0 18px 22px rgba(29, 74, 86, .16));
+}
+
+
+.case-screen-card--product img {
+  width: min(100%, 260px);
+  height: 320px;
+  max-height: none;
+  object-fit: contain;
+}
+
+.case-screen-card--product figcaption {
+  margin-top: .15rem;
 }
 
 .case-screen-card figcaption {
@@ -291,6 +313,7 @@
 
 .case-process {
   display: block;
+  padding: clamp(5rem, 8vw, 8rem) var(--page-pad);
 }
 
 .case-process .case-section-heading {
@@ -302,6 +325,8 @@
 .case-process-grid-four {
   display: grid;
   gap: 1.25rem;
+  width: min(100%, 1500px);
+  margin-inline: auto;
 }
 
 .case-process-grid {
@@ -390,16 +415,20 @@
 /* ---------- Next project ---------- */
 
 .next-project {
-  padding: clamp(5rem, 8vw, 8rem) var(--page-pad);
+  padding: clamp(3.5rem, 6vw, 5.5rem) var(--page-pad);
   border-top: 1px solid var(--border);
 }
 
+.next-project > .eyebrow {
+  margin: 0 0 1rem;
+}
+
 .next-project > a {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 2rem;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .25rem;
 }
 
 .next-project a span {
@@ -411,106 +440,6 @@
   font-size: clamp(2rem, 4vw, 4.5rem);
   font-weight: 400;
   text-align: right;
-}
-
-/* ========================================
-   CASE STUDY — IMAGE STYLES
-======================================== */
-
-/* Standard image — no special treatment */
-.cs-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* App / UI screen */
-.cs-image--screen {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-/* Smaller radius option */
-.cs-image--soft {
-  border-radius: 12px;
-}
-
-/* Completely rounded image */
-.cs-image--round {
-  border-radius: 50%;
-}
-
-.cs-site-preview {
-    overflow: hidden;
-    border-radius: 24px;
-    background: #fff;
-}
-
-.cs-site-preview img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* ========================================
-   CASE STUDY — IMAGE GALLERIES
-======================================== */
-
-.cs-gallery {
-    display: grid;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.cs-gallery--2 {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.cs-gallery--3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.cs-image {
-    margin: 0;
-    overflow: hidden;
-    border-radius: 24px;
-}
-
-.cs-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Preserve artwork that shouldn't be cropped */
-.cs-image--contain img {
-    object-fit: contain;
-}
-
-/* Large landscape feature */
-.cs-image--wide {
-    grid-column: 1 / -1;
-}
-
-/* Portrait brand/application images */
-.cs-image--portrait {
-    aspect-ratio: 4 / 5;
-}
-
-/* Square gallery item */
-.cs-image--square {
-    aspect-ratio: 1;
-}
-
-@media (max-width: 800px) {
-    .cs-gallery--2,
-    .cs-gallery--3 {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* ---------- Responsive ---------- */
