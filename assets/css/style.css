@@ -1420,6 +1420,9 @@ a {
   overflow-y: hidden;
 
   padding: .35rem 0 1.25rem;
+   flex: 0 0 380px;
+  width: 380px;
+  max-width: 380px;
 
   scroll-snap-type: inline mandatory;
   overscroll-behavior-inline: contain;
@@ -1444,8 +1447,8 @@ a {
   position: relative;
 
   width: 100%;
-  height: 350px;
   min-height: 0;
+  height: 300px;  
 
   display: flex;
   align-items: end;
@@ -1550,6 +1553,36 @@ a {
   transform: translate(4px, -4px);
   background: var(--night-sky);
   color: white;
+}
+
+/* Keep every carousel card at the same established width */
+.project-carousel .catalog-card {
+  flex: 0 0 380px;
+  width: 380px;
+  max-width: 380px;
+}
+
+/* Thumbnail stays contained inside its card */
+.project-carousel .catalog-image {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Character / portrait artwork */
+.project-carousel .character-card,
+.project-carousel .illustration-card {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Prevent the card link itself from stretching */
+.project-carousel .catalog-card > a {
+  display: block;
+  width: 100%;
 }
 
 .hearth-card {
@@ -3104,6 +3137,16 @@ body.lightbox-open {
 @media (max-width: 600px) {
   .brand-color-grid {
     grid-template-columns: 1fr;
+  }
+
+    .project-carousel .catalog-card {
+    flex-basis: 82vw;
+    width: 82vw;
+    max-width: 82vw;
+  }
+
+  .project-carousel .catalog-image {
+    height: 260px;
   }
 }
 
