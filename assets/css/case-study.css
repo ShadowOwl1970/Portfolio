@@ -414,32 +414,50 @@
 
 /* ---------- Next project ---------- */
 
+/* ========================================
+   NEXT PROJECT
+======================================== */
+
 .next-project {
-  padding: clamp(3.5rem, 6vw, 5.5rem) var(--page-pad);
+  padding: clamp(4rem, 7vw, 7rem) var(--page-pad);
   border-top: 1px solid var(--border);
+  text-align: center;
 }
 
 .next-project > .eyebrow {
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
+  text-align: center;
 }
 
 .next-project > a {
   display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  text-decoration-thickness: 1px;
-  text-underline-offset: .25rem;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.75rem;
+
+  color: var(--ink);
+  text-decoration: none;
 }
 
-.next-project a span {
-  font-weight: 700;
+.next-project > a span:first-child {
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
 
-.next-project a strong {
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(2rem, 4vw, 4.5rem);
-  font-weight: 400;
-  text-align: right;
+.next-project > a strong {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1;
+}
+
+.next-project > a span:last-child {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.next-project > a:hover {
+  opacity: 0.7;
 }
 
 /* ========================================
@@ -529,6 +547,6 @@
   .next-project a strong {
     display: block;
     margin-top: .5rem;
-    text-align: left;
+    text-align: right;
   }
 }
