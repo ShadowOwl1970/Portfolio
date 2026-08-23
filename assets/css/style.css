@@ -3667,23 +3667,36 @@ body.lightbox-open {
   gap: clamp(1.25rem, 2.5vw, 2.5rem);
 }
 
-.hearth-scanner-section {
-  background: var(--night-sky);
-  color: white;
-}
-
-.hearth-scanner-section .hearth-showcase-heading h2 em {
-  color: var(--egg-shell);
-}
-
-.hearth-scanner-grid {
+.hearth-scanner-section .hearth-showcase-heading {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1rem, 2vw, 2rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: clamp(3rem, 7vw, 7rem);
+
+  align-items: center;
+
+  max-width: 1500px;
+  margin: 0 auto clamp(3rem, 5vw, 5rem);
 }
 
-.hearth-scanner-section .hearth-screen-card figcaption {
-  color: white;
+.hearth-scanner-section .hearth-showcase-heading .eyebrow {
+  grid-column: 1 / -1;
+  margin: 0 0 -1rem;
+}
+
+.hearth-scanner-section .hearth-showcase-heading h2 {
+  max-width: 620px;
+  margin: 0;
+
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  line-height: 0.92;
+}
+
+.hearth-scanner-section .hearth-showcase-heading > p:last-child {
+  max-width: 620px;
+  margin: 0;
+
+  font-size: clamp(1rem, 1.25vw, 1.3rem);
+  line-height: 1.65;
 }
 
 .hearth-brand-showcase {
