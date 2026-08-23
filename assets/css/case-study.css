@@ -443,6 +443,76 @@
   border-radius: 50%;
 }
 
+.cs-site-preview {
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+}
+
+.cs-site-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ========================================
+   CASE STUDY — IMAGE GALLERIES
+======================================== */
+
+.cs-gallery {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.cs-gallery--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cs-gallery--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cs-image {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.cs-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Preserve artwork that shouldn't be cropped */
+.cs-image--contain img {
+    object-fit: contain;
+}
+
+/* Large landscape feature */
+.cs-image--wide {
+    grid-column: 1 / -1;
+}
+
+/* Portrait brand/application images */
+.cs-image--portrait {
+    aspect-ratio: 4 / 5;
+}
+
+/* Square gallery item */
+.cs-image--square {
+    aspect-ratio: 1;
+}
+
+@media (max-width: 800px) {
+    .cs-gallery--2,
+    .cs-gallery--3 {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
