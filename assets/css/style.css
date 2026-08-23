@@ -3513,6 +3513,13 @@ body.lightbox-open {
   background-color: var(--night-sky);
 }
 
+/* Selene thumbnail crop */
+.selene-card {
+  background-size: cover !important;
+  background-position: center 15% !important;
+  background-repeat: no-repeat !important;
+}
+
 @media (max-width: 600px) {
   .character-card,
   .illustration-card {
