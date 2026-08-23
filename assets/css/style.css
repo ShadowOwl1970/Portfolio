@@ -2508,6 +2508,57 @@ a {
   margin: 0;
 }
 
+.brand-color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+
+  padding: 2rem;
+
+  border: 2px solid var(--night-sky);
+  border-radius: 1.15rem;
+
+  background: var(--moonlight);
+}
+
+.brand-color-grid > div {
+  min-width: 0;
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  gap: .25rem;
+
+  padding: 1rem 1.1rem;
+
+  border-radius: .8rem;
+
+  overflow: hidden;
+}
+
+.brand-color-grid span {
+  font-weight: 700;
+}
+
+.brand-color-grid small {
+  font-size: .85rem;
+  opacity: .9;
+}
+
+.brand-color-grid > div:nth-child(1),
+.brand-color-grid > div:nth-child(2),
+.brand-color-grid > div:nth-child(3),
+.brand-color-grid > div:nth-child(6) {
+  color: white;
+}
+
+.brand-color-grid > div:nth-child(4),
+.brand-color-grid > div:nth-child(5) {
+  color: var(--night-sky);
+}
+
 .case-result {
   background: var(--sage);
   color: white;
@@ -2599,6 +2650,12 @@ a {
 
 }
 
+@media (max-width: 900px) {
+  .brand-color-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 720px) {
 
   .projects-hero {
@@ -2645,6 +2702,12 @@ a {
     grid-template-columns: 1fr;
   }
 
+}
+
+@media (max-width: 600px) {
+  .brand-color-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========================================
