@@ -3699,6 +3699,13 @@ body.lightbox-open {
   line-height: 1.65;
 }
 
+.hearth-scanner-section {
+  padding:
+    clamp(4.5rem, 7vw, 7rem)
+    var(--page-pad)
+    clamp(5rem, 8vw, 8rem);
+}
+
 .hearth-brand-showcase {
   padding-top: 0;
 }
