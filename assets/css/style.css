@@ -2456,10 +2456,18 @@ a {
   margin-bottom: 3rem;
 }
 
+/* 6-card layout: 3 columns × 2 rows */
 .case-process-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
 
+
+/* 4-card layout: 4 columns × 1 row */
+.case-process-grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
@@ -2572,6 +2580,14 @@ a {
     margin-bottom: 0;
   }
 
+   .case-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-process-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
 }
 
 @media (max-width: 720px) {
@@ -2613,6 +2629,11 @@ a {
     display: block;
     margin-top: .5rem;
     text-align: left;
+  }
+
+   .case-process-grid,
+   .case-process-grid-four {
+    grid-template-columns: 1fr;
   }
 
 }
