@@ -2311,7 +2311,7 @@ a {
   font-family: "DM Serif Display", serif;
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 400;
-  line-height: .86;
+  line-height: .92;
   letter-spacing: -.045em;
 }
 
@@ -2410,6 +2410,15 @@ a {
   padding:
     clamp(5rem, 9vw, 9rem)
     var(--page-pad);
+}
+.case-section + .case-section {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.case-image-wide + .case-section,
+.case-final-image + .case-section,
+.case-process + .case-section {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .case-accent {
