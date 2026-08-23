@@ -1555,36 +1555,6 @@ a {
   color: white;
 }
 
-/* Keep every carousel card at the same established width */
-.project-carousel .catalog-card {
-  flex: 0 0 380px;
-  width: 380px;
-  max-width: 380px;
-}
-
-/* Thumbnail stays contained inside its card */
-.project-carousel .catalog-image {
-  width: 100%;
-  height: 300px;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Character / portrait artwork */
-.project-carousel .character-card,
-.project-carousel .illustration-card {
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-}
-
-/* Prevent the card link itself from stretching */
-.project-carousel .catalog-card > a {
-  display: block;
-  width: 100%;
-}
-
 .hearth-card {
   background:
     radial-gradient(circle at 25% 25%, rgba(254,95,85,.32), transparent 28%),
