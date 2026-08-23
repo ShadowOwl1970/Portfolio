@@ -3503,6 +3503,16 @@ body.lightbox-open {
   max-width: none;
 }
 
+/* Portrait-style character thumbnails */
+.character-card-contain {
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
+  /* fills any empty space around tall artwork */
+  background-color: var(--night-sky);
+}
+
 @media (max-width: 600px) {
   .character-card,
   .illustration-card {
