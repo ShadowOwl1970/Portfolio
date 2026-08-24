@@ -13,6 +13,15 @@
   --border: rgba(29, 74, 86, .18);
   --shadow: 6px 6px 0 var(--night-sky);
 
+  /* Shared navy overlay for project thumbnails */
+  --thumbnail-gradient: linear-gradient(
+    to top,
+    rgba(29, 74, 86, .96) 0%,
+    rgba(29, 74, 86, .82) 20%,
+    rgba(29, 74, 86, .42) 42%,
+    rgba(29, 74, 86, 0) 68%
+  );
+
   --page-pad: clamp(1.25rem, 4vw, 5rem);
   --radius: 1.4rem;
 }
@@ -3087,84 +3096,54 @@ body.lightbox-open {
   }
 }
 
-
 /* ========================================
-   WORK PAGE — ART THUMBNAILS
+   SHARED PROJECT THUMBNAILS
 ======================================== */
 
-.character-card,
-.illustration-card,
-.catalog-card{
+.card-visual,
+.catalog-image {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 300px;
-  min-height: 300px;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.character-card::after,
-.illustration-card::after,
-.catalog-card::after{
+.card-visual::after,
+.catalog-image::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
-    linear-gradient(
-      to top,
-      rgba(29, 74, 86, .96) 0%,
-      rgba(29, 74, 86, .82) 20%,
-      rgba(29, 74, 86, .42) 42%,
-      rgba(29, 74, 86, 0) 68%
-    );
+  background: var(--thumbnail-gradient);
   pointer-events: none;
 }
 
-.character-card .catalog-placeholder,
-.illustration-card .catalog-placeholder,
-.catalog-card .catalog-placeholder{
-  position: absolute;
-  left: 1.5rem;
-  right: 1.5rem;
-  bottom: 1.35rem;
+.card-title-overlay,
+.catalog-placeholder {
+  position: relative;
   z-index: 2;
-  margin: 0;
   color: var(--white);
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(2rem, 3vw, 3.2rem);
-  font-weight: 400;
-  line-height: .95;
-  text-shadow: none;
 }
 
-.project-carousel .catalog-card {
-  width: auto;
-  max-width: none;
+.catalog-image {
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
 }
 
-/* Portrait-style character thumbnails */
 .character-card-contain {
   background-size: contain !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-
-  /* fills any empty space around tall artwork */
   background-color: var(--night-sky);
 }
 
-/* Selene thumbnail crop */
 .selene-card {
   background-size: cover !important;
   background-position: center 20% !important;
   background-repeat: no-repeat !important;
 }
-
-/* =========================
-   ABOUT PORTRAIT
-========================= */
 
 .about-portrait-wrap {
   position: relative;
@@ -3173,30 +3152,22 @@ body.lightbox-open {
 }
 
 .about-portrait {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center;
   border-radius: 24px;
-  position: relative;
-  z-index: 2;
 }
 
-
-/* Peeking owl */
-
-.about-peek-owl {
-  position: absolute;
-
+.about-portrait-wrap .about-peek-owl {
   width: 130px;
   height: auto;
-
   right: -65px;
   bottom: 45px;
-
   z-index: 1;
-
   transform: rotate(8deg);
 }
 
@@ -3207,32 +3178,9 @@ body.lightbox-open {
   object-fit: cover;
 }
 
-.catalog-image,
-.card-visual {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Keep card text above gradient */
-.catalog-placeholder {
-  position: absolute;
-  left: 28px;
-  bottom: 24px;
-  z-index: 2;
-}
-
 @media (max-width: 600px) {
-  .character-card,
-  .illustration-card {
+  .catalog-image {
     height: 260px;
     min-height: 260px;
-  }
-
-  .character-card .catalog-placeholder,
-  .illustration-card .catalog-placeholder {
-    left: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.15rem;
   }
 }
