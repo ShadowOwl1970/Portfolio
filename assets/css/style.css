@@ -3093,7 +3093,8 @@ body.lightbox-open {
 ======================================== */
 
 .character-card,
-.illustration-card {
+.illustration-card,
+.catalog-card{
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -3105,7 +3106,8 @@ body.lightbox-open {
 }
 
 .character-card::after,
-.illustration-card::after {
+.illustration-card::after,
+.catalog-card::after{
   content: "";
   position: absolute;
   inset: 0;
@@ -3122,7 +3124,8 @@ body.lightbox-open {
 }
 
 .character-card .catalog-placeholder,
-.illustration-card .catalog-placeholder {
+.illustration-card .catalog-placeholder,
+.catalog-card .catalog-placeholder{
   position: absolute;
   left: 1.5rem;
   right: 1.5rem;
