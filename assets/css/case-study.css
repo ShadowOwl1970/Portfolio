@@ -435,7 +435,7 @@
   justify-content: center;
   gap: 0.75rem;
 
-  color: var(--ink);
+  color: var(--night-sky);
   text-decoration: none;
 }
 
@@ -446,7 +446,7 @@
 }
 
 .next-project > a strong {
-  font-family: var(--font-display);
+  font-family: "DM Serif Display", serif;
   font-size: clamp(2.5rem, 5vw, 5rem);
   line-height: 1;
 }
@@ -458,41 +458,6 @@
 
 .next-project > a:hover {
   opacity: 0.7;
-}
-
-.catalog-image {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Shared image-card gradient */
-.catalog-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.28) 38%,
-    rgba(0, 0, 0, 0) 68%
-  );
-
-  pointer-events: none;
-}
-
-/* Keep card text above gradient */
-.catalog-placeholder {
-  position: absolute;
-  left: 28px;
-  bottom: 24px;
-  z-index: 2;
 }
 
 /* ========================================
@@ -582,6 +547,6 @@
   .next-project a strong {
     display: block;
     margin-top: .5rem;
-    text-align: right;
+    text-align: center;
   }
 }
