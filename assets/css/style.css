@@ -3197,6 +3197,13 @@ body.lightbox-open {
   transform: rotate(8deg);
 }
 
+.project-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 600px) {
   .character-card,
   .illustration-card {
