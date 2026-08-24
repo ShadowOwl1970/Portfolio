@@ -1561,12 +1561,7 @@ a {
   color: white;
 }
 
-.hearth-card {
-  background:
-    radial-gradient(circle at 25% 25%, rgba(254,95,85,.32), transparent 28%),
-    radial-gradient(circle at 75% 65%, rgba(44,166,164,.35), transparent 30%),
-    var(--egg-shell);
-}
+
 
 .rivers-card {
   background: var(--sunset);
@@ -1583,10 +1578,7 @@ a {
     linear-gradient(145deg, #3B3FAE, var(--night-sky));
 }
 
-.suklaa-catalog-card {
-  color: #F6CF6E;
-  background: #1E2332;
-}
+
 
 .podtopia-card {
   color: white;
@@ -1612,7 +1604,7 @@ a {
 }
 
 .illustration-card {
-  color: var(--night-sky);
+  color: white;
   background:
     linear-gradient(145deg, #A9D8E6, var(--egg-shell));
 }
