@@ -3211,6 +3211,38 @@ body.lightbox-open {
   background-repeat: no-repeat;
 }
 
+.catalog-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Shared image-card gradient */
+.catalog-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.28) 38%,
+    rgba(0, 0, 0, 0) 68%
+  );
+
+  pointer-events: none;
+}
+
+/* Keep card text above gradient */
+.catalog-placeholder {
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
+  z-index: 2;
+}
+
 @media (max-width: 600px) {
   .character-card,
   .illustration-card {
