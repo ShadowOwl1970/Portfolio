@@ -3159,6 +3159,44 @@ body.lightbox-open {
   background-repeat: no-repeat !important;
 }
 
+/* =========================
+   ABOUT PORTRAIT
+========================= */
+
+.about-portrait-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Peeking owl */
+
+.about-peek-owl {
+  position: absolute;
+
+  width: 130px;
+  height: auto;
+
+  right: -65px;
+  bottom: 45px;
+
+  z-index: 1;
+
+  transform: rotate(8deg);
+}
+
 @media (max-width: 600px) {
   .character-card,
   .illustration-card {
