@@ -3170,6 +3170,19 @@ body.lightbox-open {
   object-fit: cover;
 }
 
+.catalog-image {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--night-sky);
+}
 @media (max-width: 600px) {
   .catalog-image {
     height: 260px;
