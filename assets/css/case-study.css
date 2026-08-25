@@ -541,12 +541,12 @@
   }
 
   .next-project > a {
-    display: block;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .next-project a strong {
-    display: block;
-    margin-top: .5rem;
     text-align: center;
   }
 }
