@@ -3149,6 +3149,10 @@ body.lightbox-open {
   display: none;
 }
 
+.two-rivers-card {
+   object-position: center 20%;
+}
+
 
 
 /* ========================================
