@@ -3149,8 +3149,8 @@ body.lightbox-open {
   display: none;
 }
 
-.project-card .two-rivers-card img {
-   object-position: center 20%;
+.two-rivers-image img {
+   background position: center 20%;
 }
 
 
