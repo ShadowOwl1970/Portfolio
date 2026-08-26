@@ -3139,14 +3139,9 @@ body.lightbox-open {
   object-fit: cover;
 }
 
-/* =========================================
-   HOME — FEATURED WORK
-   Clean image thumbnails
-========================================= */
-
-.featured-work .project-card::after,
-.featured-projects .project-card::after {
-  display: none;
+.featured-work .project-overlay,
+.featured-projects .project-overlay {
+  background: transparent;
 }
 
 /* ========================================
