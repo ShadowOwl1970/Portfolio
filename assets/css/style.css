@@ -3149,8 +3149,13 @@ body.lightbox-open {
   display: none;
 }
 
-.two-rivers-image img {
-   background position: center 20%;
+.two-rivers-image {
+   background position: center 20% !important;
+}
+.selene-card {
+  background-size: cover !important;
+  background-position: center 20% !important;
+  background-repeat: no-repeat !important;
 }
 
 
