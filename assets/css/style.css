@@ -3149,7 +3149,7 @@ body.lightbox-open {
   display: none;
 }
 
-.two-rivers-card {
+.project-card .two-rivers-card img {
    object-position: center 20%;
 }
 
