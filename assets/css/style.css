@@ -3139,6 +3139,16 @@ body.lightbox-open {
   object-fit: cover;
 }
 
+/* =========================================
+   HOME — FEATURED WORK
+   Clean image thumbnails
+========================================= */
+
+.featured-work .project-card::after,
+.featured-projects .project-card::after {
+  display: none;
+}
+
 /* ========================================
    ABOUT PORTRAIT + PEEKING OWL
 ======================================== */
