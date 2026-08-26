@@ -3144,6 +3144,11 @@ body.lightbox-open {
   background: transparent;
 }
 
+.featured-work .project-card::after,
+.featured-projects .project-card::after {
+  display: none;
+}
+
 
 
 /* ========================================
