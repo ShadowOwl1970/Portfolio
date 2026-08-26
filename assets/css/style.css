@@ -3139,13 +3139,11 @@ body.lightbox-open {
   object-fit: cover;
 }
 
-.featured-work .project-overlay,
-.featured-projects .project-overlay {
-  background: transparent;
-}
+/* ========================================
+   HOME — REMOVE FEATURED WORK OVERLAYS
+======================================== */
 
-.featured-work .project-card::after,
-.featured-projects .project-card::after {
+.work-section .project-grid .card-visual::after {
   display: none;
 }
 
