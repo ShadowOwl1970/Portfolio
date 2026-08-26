@@ -1937,7 +1937,7 @@ a {
     clamp(6rem, 10vw, 10rem)
     var(--page-pad);
 
-  background: var(--sunset);
+  background: var(--eggshell);
   color: var(--night-sky);
   text-align: left;
 }
@@ -3002,7 +3002,7 @@ body.lightbox-open {
     clamp(6rem, 10vw, 10rem)
     var(--page-pad);
 
-  background: var(--sunset);
+  background: var(--eggshell);
 
   text-align: center;
 }
